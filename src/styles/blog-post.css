@@ -3,7 +3,7 @@
 }
 .subimg{
   width:100%;
-  margin-top:50px;
+  margin-top:0px;
 }
 .ttl{
   font-family: 'Kumbh Sans', sans-serif;
@@ -54,6 +54,13 @@
   letter-spacing: 0.03rem;
   text-align:left;
 }
+.imggrid{
+    width: 100%; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: flex-start;
+  }
 iframe{
   width:100%;
   height:calc(56.25*0.9vw);
@@ -94,7 +101,7 @@ iframe{
   }
   .box{
     display: inline-block;
-    width:48%;
+    width:49%;
     margin-bottom: 5px;
     vertical-align : top;
   }
@@ -116,6 +123,13 @@ iframe{
     font-size: 0.6rem;
     letter-spacing: 0.03rem;
     text-align:left;
+  }
+  .imggrid{
+    width: 100%; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: flex-start;
   }
   iframe{
     width:100%;

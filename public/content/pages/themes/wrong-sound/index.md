@@ -3,17 +3,17 @@ title: Wrong Sound
 title_zh: 錯誤的聲音
 featuredImage: cover.jpg
 works:
-  - title: Listen to the Light - Keelung ver.
-    slug: lightKeelung
-  - title: Listen to the Light - routine
-    slug: light2
-  - title: Listen to the Light
-    slug: light
-  - title: Sun Dairy
-    slug: sun
+  - title: Feeding
+    slug: feeding
+  - title: Cyberfly
+    slug: cyberfly
+  - title: Cross
+    slug: cross
+  - title: &#x611b
+    slug: x611b
 description:
-  en: 'Works that listen to flicker, solar data, and hidden messages carried by light.'
-  zh: 以閃爍、太陽資料與光源中隱藏的訊號為線索所發展的作品。
+  en: 'Speakers'
+  zh: 喇叭
 media: []
 ---
 

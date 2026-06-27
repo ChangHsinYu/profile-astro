@@ -11,21 +11,21 @@ const titleZh = data.title_zh || data.title?.zh || data.title || data.title_en;
 const descriptionEn = data.description?.en || data.description_en || "";
 const descriptionZh = data.description?.zh || data.description_zh || descriptionEn;
 ---
+<div class="theme_card" id={`theme-${entry.slug}`}>
+  <a href={entry.href}>
+    {entry.featuredImage && (
+      <img class="theme_card_img" src={entry.featuredImage} alt={titleEn || "theme"} />
+    )}
 
-<a class="theme_card" id={`theme-${entry.slug}`} href={entry.href}>
-  {entry.featuredImage && (
-    <img class="theme_card_img" src={entry.featuredImage} alt={titleEn || "theme"} />
-  )}
+    <h2 class="theme_card_title" data-lang="en">{titleEn}</h2>
+    <h2 class="theme_card_title" data-lang="zh">{titleZh}</h2>
 
-  <h2 class="theme_card_title" data-lang="en">{titleEn}</h2>
-  <h2 class="theme_card_title" data-lang="zh">{titleZh}</h2>
-
-  {descriptionEn && <p class="theme_card_description" data-lang="en">{descriptionEn}</p>}
-  {descriptionZh && <p class="theme_card_description" data-lang="zh">{descriptionZh}</p>}
-
+    {descriptionEn && <p class="theme_card_description" data-lang="en">{descriptionEn}</p>}
+    {descriptionZh && <p class="theme_card_description" data-lang="zh">{descriptionZh}</p>}
+  </a>
   {works.length > 0 && (
     <ul class="theme_card_works">
-      {works.map((work) => <li>{work.title}</li>)}
+      {works.map((work) => <li><a href={work.href}>{work.title}</a></li>)}
     </ul>
   )}
-</a>
+</div>
