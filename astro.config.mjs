@@ -12,6 +12,6 @@
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: "https://ChangHsinYu.github.io",
+  site: "https://changhsinyu.github.io",
   base: "/profile-astro/"
 });
