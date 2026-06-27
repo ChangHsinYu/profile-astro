@@ -14,21 +14,26 @@ const media = data.media || [];
 
 <Layout title={data.title || "Collaboration"}>
   <div class="work_main">
-    {entry.featuredImage && <img class="img" src={entry.featuredImage} alt={data.title || "collaboration"} />}
+    {entry.featuredImage && <img class="img" src={entry.featuredImage} alt={data.title || "artwork"} />}
     <div class="ttlbox">
       <div class="ttl">{data.title}</div>
       <div class="inf">{data.category}<br />{data.material}<br /><br />{data.date}</div>
     </div>
     <div data-lang="en" set:html={entry.languageHtml.en} />
     <div data-lang="zh" set:html={entry.languageHtml.zh} />
+    <div class="imggrid">
     {media.map((item) => (
       item.type === "image" ? (
         <div class="box">
-          <img class="subimg" src={item.src} alt={item.alt || data.title || "collaboration image"} />
+          <img class="subimg" src={item.src} alt={item.alt || data.title || "artwork image"} />
           {item.credit && <div class="photocredit">(photo by : {item.credit})</div>}
         </div>
-      ) : item.type === "video" ? (
-        <div class="box">
+      ) : null
+    ))}
+  </div>
+  {media.map((item) => (
+      item.type === "video" ? (
+        <div>
           <iframe title={item.title || data.title || "video"} src={item.src} frameborder="0" allow={item.allow} allowfullscreen></iframe>
         </div>
       ) : null

@@ -1,6 +1,7 @@
-.theme_section{
+.theme{
+  margin-top:0;
+  margin-bottom:20px;
   width:100%;
-  margin-bottom:40px;
 }
 
 .theme_card_img{
@@ -11,15 +12,7 @@
   margin-bottom:14px;
 }
 
-.theme_grid{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:18px;
-  width:100%;
-}
-
 .theme_card{
-  padding-top:14px;
   width:100%;
 }
 .theme_card a{
@@ -67,18 +60,15 @@
 .theme_card_works a:hover{color:#000000;}
 
 @media screen and (min-width:800px){
-  .theme_section{
-    margin-bottom:70px;
-  }
-
-  .theme_grid{
-    grid-template-columns:repeat(3, minmax(0, 1fr));
-    gap:1.25%;
+  .theme{
+    display:inline-block;
+    width:32%;
+    height:auto;
+    float: none;
   }
 
   .theme_card{
     min-height:260px;
-    padding-top:18px;
   }
 
   .theme_card_title{

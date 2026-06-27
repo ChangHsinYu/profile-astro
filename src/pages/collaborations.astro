@@ -4,16 +4,76 @@ import ArtworkCard from "../components/ArtworkCard.astro";
 import { getOrderedEntries } from "../utils/content.js";
 
 const entries = getOrderedEntries("collaborations");
+
+const categoryOrder = ["Creative Coding", "Sound and Visual", "Sound", "Visual", "Performance", "Installation", "Other"];
+
+const groupedEntries = entries.reduce((groups, entry) => {
+  const category = entry.data.category || "Other";
+
+  if (!groups[category]) {
+    groups[category] = [];
+  }
+
+  groups[category].push(entry);
+  return groups;
+}, {});
+
+const categories = [
+  ...categoryOrder.filter((category) => groupedEntries[category]),
+  ...Object.keys(groupedEntries).filter((category) => !categoryOrder.includes(category))
+];
+
 ---
 
-<Layout title="chang hsin-yu 張欣語 collaborations">
+<style>
+  .work_catagery {
+    letter-spacing: 0.05rem;
+    font-size:0.65rem;
+    width:100%;
+    text-align:left;
+    margin-top:50px;
+  }
+
+  @media screen and (min-width:800px){
+    .work_catagery {
+      letter-spacing: 0.05rem;
+      font-size:0.8rem;
+      margin-top:0;
+      width:100%;
+      height:50px;
+      text-align:left;
+    }
+  }
+</style>
+
+<Layout title="chang hsin-yu 張欣語 collaborations and others">
   <div class="work_main">
-    <div style="width:100%;display:flex;justify-content:space-between;flex-wrap:wrap">
-      {entries.map((entry) => (
-        <div class="work">
-          <ArtworkCard entry={entry} />
-        </div>
-      ))}
-    </div>
+    {categories.map((category) => {
+      const categoryEntries = groupedEntries[category];
+      // const placeholderCount = Math.max(0, 5 - categoryEntries.length);
+      const columns = 5;
+      const placeholderCount = (columns - (categoryEntries.length % columns)) % columns;
+
+      return (
+        <section>
+          <div class="work_catagery">
+            <div>{category}</div>
+            <div style="width:100%;margin-top:10px;border-bottom: 1px solid #000;"></div>
+          </div>
+
+          <div style="width:100%;display:flex;justify-content:space-between;flex-wrap:wrap;margin-top:10px;">
+            {groupedEntries[category].map((entry) => (
+              <div class="work">
+                <ArtworkCard entry={entry} />
+              </div>
+            ))}
+
+            {Array.from({ length: placeholderCount }).map(() => (
+              <div class="work work_placeholder" aria-hidden="true"></div>
+            ))}
+          </div>
+        </section>
+      );
+    })}
   </div>
 </Layout>

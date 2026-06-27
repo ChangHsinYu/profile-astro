@@ -7,6 +7,11 @@ import { getThemeEntries } from "../utils/themes.js";
 
 const entries = getOrderedEntries("artworks");
 const themes = getThemeEntries();
+
+const artworkcolumns = 5;
+const themecolumns = 5;
+const artworkPlaceholderCount = (artworkcolumns - (entries.length % artworkcolumns)) % artworkcolumns;
+const themePlaceholderCount = (themecolumns - (themes.length % themecolumns)) % themecolumns;
 ---
 
 <style>
@@ -36,23 +41,45 @@ const themes = getThemeEntries();
       <div>Themes and Evolution</div>
       <div style="width:100%;margin-top:10px;border-bottom: 1px solid #000;"></div>
     </div>
-    <div class="theme_section">
-      <div class="theme_grid">
-        {themes.map((theme) => <ThemeCard entry={theme} />)}
-      </div>
+    <div style="width:100%;display:flex;justify-content:space-between;flex-wrap:wrap;margin-top:10px;">
+      {themes.map((theme) => (
+        <div class="theme">
+          <ThemeCard entry={theme} />
+        </div>
+      ))}
+      {Array.from({ length: themePlaceholderCount }).map(() => (
+        <div class="theme" aria-hidden="true"></div>
+      ))}
     </div>
 
     <div class="work_catagery">
       <div>List of works (sort by years)</div>
       <div style="width:100%;margin-top:10px;border-bottom: 1px solid #000;"></div>
     </div>
-
     <div style="width:100%;display:flex;justify-content:space-between;flex-wrap:wrap;margin-top:10px;">
       {entries.map((entry) => (
         <div class="work">
           <ArtworkCard entry={entry} />
         </div>
       ))}
+      {Array.from({ length: artworkPlaceholderCount }).map(() => (
+        <div class="work" aria-hidden="true"></div>
+      ))}
     </div>
   </div>
 </Layout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

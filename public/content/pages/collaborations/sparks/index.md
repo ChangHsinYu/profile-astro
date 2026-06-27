@@ -3,7 +3,7 @@ posttype: work
 title: Sparks
 date: '2025'
 material: 'led light strip, PVC, speaker, fog, metal'
-category: Sound installation
+category: Installation
 event: 新營波光節
 venue: Swan Lake Park (TW)
 featuredImage: img0.jpg
