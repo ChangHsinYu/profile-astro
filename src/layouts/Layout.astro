@@ -10,27 +10,23 @@ import "../styles/project-post.css";
 
 const { title = "chang hsin-yu 張欣語" } = Astro.props;
 
-const base = import.meta.env.BASE_URL;
-
-const withBase = (path) => `${base}${path.replace(/^\/+/, "")}`;
-
 const links = [
-  ["NEWS", withBase("/news")],
-  ["CV", withBase("/cv")],
-  ["REFLECTIONS", withBase("/reflections")],
-  ["WORKS", withBase("/artworks")],
-  ["COLLABORATIONS", withBase("/collaborations")],
-  ["PROJECTS", withBase("/projects")],
-  ["CREATIVE CODINGS", withBase("/codearts")]
+  ["NEWS", "/news"],
+  ["CV", "/cv"],
+  ["REFLECTIONS", "/reflections"],
+  ["WORKS", "/artworks"],
+  ["COLLABORATIONS", "/collaborations"],
+  ["PROJECTS", "/projects"],
+  ["CREATIVE CODINGS", "/codearts"]
 ];
 
 const contacts = [
-  ["facebook", "https://www.facebook.com/profile.php?id=100002291973060&viewas=&show_switched_toast=false", withBase("/icons/fb.png")],
-  ["mail", "mailto:eddyeddy5825945@gmail.com", withBase("/icons/mail.png")],
-  ["instagram", "https://www.instagram.com/hsiinyu.c/", withBase("/icons/ig.png")],
-  ["vimeo", "https://vimeo.com/changhsinyu", withBase("/icons/vm.png")],
-  ["twitter", "https://twitter.com/ChangHsinYu3", withBase("/icons/tw.png")],
-  ["github", "https://github.com/ChangHsinYu", withBase("/icons/git.png")]
+  ["facebook", "https://www.facebook.com/profile.php?id=100002291973060&viewas=&show_switched_toast=false", "/icons/fb.png"],
+  ["mail", "mailto:eddyeddy5825945@gmail.com", "/icons/mail.png"],
+  ["instagram", "https://www.instagram.com/hsiinyu.c/", "/icons/ig.png"],
+  ["vimeo", "https://vimeo.com/changhsinyu", "/icons/vm.png"],
+  ["twitter", "https://twitter.com/ChangHsinYu3", "/icons/tw.png"],
+  ["github", "https://github.com/ChangHsinYu", "/icons/git.png"]
 ];
 ---
 
