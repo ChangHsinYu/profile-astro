@@ -1,0 +1,54 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getEntries, getEntry } from "../../utils/content.js";
+import { getThemeWorks } from "../../utils/themes.js";
+
+export function getStaticPaths() {
+  return getEntries("themes").map((entry) => ({ params: { slug: entry.slug } }));
+}
+
+const entry = getEntry("themes", Astro.params.slug);
+if (!entry) return Astro.redirect("/404");
+
+const data = entry.data;
+const titleEn = data.title_en || data.title?.en || data.title || data.title_zh;
+const titleZh = data.title_zh || data.title?.zh || data.title || data.title_en;
+const descriptionEn = data.description?.en || data.description_en || entry.languageHtml?.en || "";
+const descriptionZh = data.description?.zh || data.description_zh || entry.languageHtml?.zh || descriptionEn;
+const works = getThemeWorks(entry);
+---
+
+<Layout title={titleEn || "Theme"}>
+  <div class="work_main">
+    {entry.featuredImage && <img class="img" src={entry.featuredImage} alt={titleEn || "theme"} />}
+
+    <div class="ttlbox">
+      <div class="ttl" data-lang="en">{titleEn}</div>
+      <div class="ttl" data-lang="zh">{titleZh}</div>
+    </div>
+
+    {descriptionEn && (
+      <div class="box" data-lang="en">
+        <div class="dscrptn">{descriptionEn}</div>
+      </div>
+    )}
+
+    {descriptionZh && (
+      <div class="box" data-lang="zh">
+        <div class="dscrptn">{descriptionZh}</div>
+      </div>
+    )}
+
+    {works.length > 0 && (
+      <div class="box">
+        <ul class="theme_card_works">
+          {works.map((work) => (
+            <li>
+              <a href={work.href}>{work.title}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </div>
+</Layout>

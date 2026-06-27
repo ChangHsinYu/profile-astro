@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ArtworkCard from "../components/ArtworkCard.astro";
+import { getOrderedEntries } from "../utils/content.js";
+
+const entries = getOrderedEntries("reflections");
+---
+
+<Layout title="chang hsin-yu 張欣語 reflections">
+  <div class="work_main">
+    <div style="width:100%;display:flex;justify-content:space-between;flex-wrap:wrap">
+      {entries.map((entry) => (
+        <div class="work">
+          <ArtworkCard entry={entry} />
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>

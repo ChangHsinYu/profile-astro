@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { getOrderedEntries } from "../utils/content.js";
+
+const entries = getOrderedEntries("projects");
+---
+
+<Layout title="chang hsin-yu 張欣語 projects">
+  <div class="work_main">
+    <div style="width:100%;display:flex;justify-content:space-between;flex-wrap:wrap">
+      {entries.map((entry) => <ProjectCard entry={entry} />)}
+      <div class="project"></div>
+      <div class="project"></div>
+    </div>
+  </div>
+</Layout>

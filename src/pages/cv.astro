@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getEntry } from "../utils/content.js";
+
+const entry = getEntry("cv", "main");
+const cv = entry?.data.cv || {};
+const languages = [
+  ["en", cv.en],
+  ["zh", cv.zh]
+].filter(([, content]) => Boolean(content));
+---
+
+<Layout title="chang hsin-yu 張欣語 cv">
+  <div class="work_main">
+    <div class="cv_img cv_img_placeholder">Portrait image missing from source zip</div>
+    <div class="cv_content">
+      {languages.map(([language, content]) => (
+        <div class="cv_content_language" data-lang={language}>
+          <div style="font-size:1.4rem">{content.name}<br /></div>
+          <br />
+          {content.bio && <div>{content.bio}</div>}
+          <br />
+          <br />
+
+          {content.sections?.map((section) => (
+            <div>
+              <span class="cv_title">{section.title}</span><br /><br />
+              {section.items?.map((item) => (
+                <div class="cv_item">
+                  <div class="cv_year">{item.year}</div><div class="cv_inf">{item.text}</div><br />
+                  <div class="cv_year"></div><div class="cv_inf"><hr /></div>
+                </div>
+              ))}
+              <br />
+              <br />
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>

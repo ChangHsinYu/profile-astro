@@ -1,0 +1,58 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ArtworkCard from "../components/ArtworkCard.astro";
+import ThemeCard from "../components/ThemeCard.astro";
+import { getOrderedEntries } from "../utils/content.js";
+import { getThemeEntries } from "../utils/themes.js";
+
+const entries = getOrderedEntries("artworks");
+const themes = getThemeEntries();
+---
+
+<style>
+  .work_catagery {
+    letter-spacing: 0.05rem;
+    font-size:0.65rem;
+    width:100%;
+/*    height:50px;*/
+    text-align:left;
+    margin-top:50px;
+  }
+  @media screen and (min-width:800px){
+    .work_catagery {
+      letter-spacing: 0.05rem;
+      font-size:0.8rem;
+      margin-top:0;
+      width:100%;
+      height:50px;
+      text-align:left;
+    }
+  }
+</style>
+
+<Layout title="chang hsin-yu 張欣語 works">
+  <div class="work_main">
+    <div class="work_catagery">
+      <div>Themes and Evolution</div>
+      <div style="width:100%;margin-top:10px;border-bottom: 1px solid #000;"></div>
+    </div>
+    <div class="theme_section">
+      <div class="theme_grid">
+        {themes.map((theme) => <ThemeCard entry={theme} />)}
+      </div>
+    </div>
+
+    <div class="work_catagery">
+      <div>List of works (sort by years)</div>
+      <div style="width:100%;margin-top:10px;border-bottom: 1px solid #000;"></div>
+    </div>
+
+    <div style="width:100%;display:flex;justify-content:space-between;flex-wrap:wrap;margin-top:10px;">
+      {entries.map((entry) => (
+        <div class="work">
+          <ArtworkCard entry={entry} />
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>

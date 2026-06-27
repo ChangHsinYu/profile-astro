@@ -1,0 +1,30 @@
+---
+title: Creature from Desolate Planet
+date: '2024'
+material: 'max/msp, processing'
+category: Audio visual performance
+event: ' '
+venue: 'National Taiwan Museum of Fine Arts (TW), Lapin et Halot (JP)'
+featuredImage: img0.jpg
+description:
+  en: 'This is a monster born in the desolate planet. We cannot see its body clearly, but we can feel its energy and hear the sounds made by different parts of its body'
+  zh: 'This is a monster born in the desolate planet. We cannot see its body clearly, but we can feel its energy and hear the sounds made by different parts of its body'
+media:
+  - type: image
+    src: img1.jpg
+    credit: 國立台灣美術館
+  - type: image
+    src: img2.jpg
+    credit: 國立台灣美術館
+  - type: image
+    src: img3.jpg
+    credit: 國立台灣美術館
+  - type: image
+    src: img4.jpg
+    credit: 國立台灣美術館
+  - type: video
+    src: 'https://player.vimeo.com/video/1004237795'
+    title: vimeo-player
+    provider: vimeo
+---
+

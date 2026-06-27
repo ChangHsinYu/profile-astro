@@ -1,0 +1,53 @@
+---
+const { entry } = Astro.props;
+const data = entry.data;
+---
+
+<a class="artwork_card" href={entry.href}>
+    <div class="work_img">
+      {entry.featuredImage ? (
+        <img src={entry.featuredImage} style="width:100%;height:100%;" alt={data.title || "artwork"} />
+      ) : (
+        <div class="missing-image">Missing image</div>
+      )}
+    </div>
+
+  <div class="work_inf_mobile">
+    <span style="font-weight:700">{data.title}</span>, {data.category}, {data.date}
+  </div>
+  <br />
+  <div class="work_inf2_mobile">{data.venue}</div>
+
+  <ul class="work_inf">
+    <li><span style="font-weight:700">{data.title}</span></li>
+    <li>{data.category}</li>
+    <li>{data.date}</li>
+  </ul>
+  <ul class="work_inf2">
+    <li>{data.venue}</li>
+  </ul>
+</a>
+
+<style>
+  .artwork_card {
+    color: inherit;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+  }
+
+  .artwork_card img {
+    display: block;
+  }
+
+  .missing-image {
+    align-items: center;
+    background: #f2f2f2;
+    color: #888;
+    display: flex;
+    font-size: 0.75rem;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+  }
+</style>

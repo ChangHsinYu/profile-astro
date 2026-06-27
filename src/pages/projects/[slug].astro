@@ -1,0 +1,43 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getEntries, getEntry } from "../../utils/content.js";
+
+export function getStaticPaths() {
+  return getEntries("projects").map((entry) => ({ params: { slug: entry.slug } }));
+}
+
+const entry = getEntry("projects", Astro.params.slug);
+if (!entry) return Astro.redirect("/404");
+const data = entry.data;
+const media = data.media || [];
+---
+
+<Layout title={data.title || "Project"}>
+  <div class="work_main">
+    <div class="project_main">
+      {entry.featuredImage && (
+        <div class="project_main_img">
+          <img src={entry.featuredImage} style="width:100%;height:100%;object-fit:cover;object-position:center" alt={data.title || "project"} />
+        </div>
+      )}
+      <div class="project_ttlbox">
+        <div class="project_ttl">{data.title}</div>
+      <div class="project_inf">{data.position}<br />{data.date}</div>
+      </div>
+      <div class="project_dscrptn" data-lang="en" set:html={entry.languageHtml.en} />
+      <div class="project_dscrptn" data-lang="zh" set:html={entry.languageHtml.zh} />
+      {media.map((item) => (
+        item.type === "image" ? (
+          <div class="project_box">
+            <img class="project_subimg" src={item.src} alt={item.alt || data.title || "project image"} />
+            {item.credit && <div class="photocredit">(photo by : {item.credit})</div>}
+          </div>
+        ) : item.type === "video" ? (
+          <div class="project_box">
+            <iframe title={item.title || data.title || "video"} src={item.src} frameborder="0" allow={item.allow} allowfullscreen></iframe>
+          </div>
+        ) : null
+      ))}
+    </div>
+  </div>
+</Layout>

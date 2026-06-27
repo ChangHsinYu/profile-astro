@@ -1,0 +1,137 @@
+---
+import "../styles/layout.css";
+import "../styles/artworks.css";
+import "../styles/projects.css";
+import "../styles/cv.css";
+import "../styles/news.css";
+import "../styles/codearts.css";
+import "../styles/blog-post.css";
+import "../styles/project-post.css";
+
+const { title = "chang hsin-yu 張欣語" } = Astro.props;
+
+const links = [
+  ["NEWS", "/news"],
+  ["CV", "/cv"],
+  ["REFLECTIONS", "/reflections"],
+  ["WORKS", "/artworks"],
+  ["COLLABORATIONS", "/collaborations"],
+  ["PROJECTS", "/projects"],
+  ["CREATIVE CODINGS", "/codearts"]
+];
+
+const contacts = [
+  ["facebook", "https://www.facebook.com/profile.php?id=100002291973060&viewas=&show_switched_toast=false", "/icons/fb.png"],
+  ["mail", "mailto:eddyeddy5825945@gmail.com", "/icons/mail.png"],
+  ["instagram", "https://www.instagram.com/hsiinyu.c/", "/icons/ig.png"],
+  ["vimeo", "https://vimeo.com/changhsinyu", "/icons/vm.png"],
+  ["twitter", "https://twitter.com/ChangHsinYu3", "/icons/tw.png"],
+  ["github", "https://github.com/ChangHsinYu", "/icons/git.png"]
+];
+---
+
+<!doctype html>
+<html lang="zh-Hant" data-language="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main>
+      <div class="menu_mobile" id="menu">
+        <ul class="menu_mobile_list">
+          {links.map(([label, href]) => (
+            <>
+              <li>
+                <a href={href}>
+                  <button class="aa" data-close-menu><br /><br />{label}<br /><br /></button>
+                </a>
+              </li>
+              <hr />
+            </>
+          ))}
+        </ul>
+        <ul class="contact_mobile">
+          {contacts.map(([label, href, icon]) => (
+            <li class="contact_item">
+              <a href={href} target="_blank" rel="noreferrer" aria-label={label}>
+                <img class="contact_icon" src={icon} alt={label} />
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="bar">
+        <a href="/" class="title">CHANG&nbsp;HSIN-YU</a>
+        <div class="language_switch" aria-label="Language switch">
+          <button type="button" data-language-button="zh">CH</button>
+          <span>|</span>
+          <button type="button" data-language-button="en">EN</button>
+        </div>
+        <button class="menu_icon" id="menu-button" aria-label="Open menu">
+          <span style="display:block;width:100%;font-size:1.4rem;line-height:1">☰</span>
+        </button>
+        <ul class="menu">
+          {links.map(([label, href]) => (
+            <li style="display:inline-block;margin-left:2rem"><a href={href} class="menu_link">{label}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <slot />
+
+      <div style="width:100%;float:left">
+        <ul class="contact">
+          {contacts.map(([label, href, icon]) => (
+            <li class="contact_item">
+              <a href={href} target="_blank" rel="noreferrer" aria-label={label}>
+                <img class="contact_icon" src={icon} alt={label} />
+              </a>
+            </li>
+          ))}
+        </ul>
+        <div class="copyright">CHANG HSIN YU © 2024</div>
+      </div>
+    </main>
+
+    <script>
+      const menu = document.getElementById("menu");
+      const button = document.getElementById("menu-button");
+      let open = false;
+
+      function setOpen(next) {
+        open = next;
+        if (!menu) return;
+        menu.classList.toggle("is-open", open);
+      }
+
+      button?.addEventListener("click", () => setOpen(!open));
+      document.querySelectorAll("[data-close-menu]").forEach((item) => {
+        item.addEventListener("click", () => setOpen(false));
+      });
+
+      const languageButtons = document.querySelectorAll("[data-language-button]");
+      const savedLanguage = localStorage.getItem("language") || "zh";
+
+      function setLanguage(language) {
+        document.documentElement.dataset.language = language;
+        localStorage.setItem("language", language);
+        languageButtons.forEach((item) => {
+          item.classList.toggle("active", item.dataset.languageButton === language);
+        });
+      }
+
+      languageButtons.forEach((item) => {
+        item.addEventListener("click", () => setLanguage(item.dataset.languageButton || "en"));
+      });
+
+      setLanguage(savedLanguage);
+    </script>
+  </body>
+</html>

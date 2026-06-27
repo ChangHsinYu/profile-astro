@@ -1,0 +1,24 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getEntries, getEntry } from "../../utils/content.js";
+
+export function getStaticPaths() {
+  return getEntries("reflections").map((entry) => ({ params: { slug: entry.slug } }));
+}
+
+const entry = getEntry("reflections", Astro.params.slug);
+if (!entry) return Astro.redirect("/404");
+const data = entry.data;
+---
+
+<Layout title={data.title || "Reflection"}>
+  <div class="work_main">
+    {entry.featuredImage && <img class="img" src={entry.featuredImage} alt={data.title || "reflection"} />}
+    <div class="ttlbox">
+      <div class="ttl">{data.title}</div>
+      <div class="inf">{data.category}<br />{data.material}<br /><br />{data.date}</div>
+    </div>
+    <div data-lang="en" set:html={entry.languageHtml.en} />
+    <div data-lang="zh" set:html={entry.languageHtml.zh} />
+  </div>
+</Layout>
