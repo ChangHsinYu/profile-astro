@@ -1,10 +1,17 @@
 ---
 title: Rainforest
 date: "2025"
-material: wood, motor, nail, brush, contact microphone, speaker
+material:
+  - wood
+  - motor
+  - nail
+  - brush
+  - contact microphone
+  - speaker
 category: Sound installation
 event: " "
-venue: Waley Art (TW)
+venue:
+  - Waley Art (TW)
 featuredImage: img0.jpg
 blocks:
   en:

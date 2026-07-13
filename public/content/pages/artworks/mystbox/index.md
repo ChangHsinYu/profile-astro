@@ -1,10 +1,16 @@
 ---
 title: Myst(Box Version)
 date: "2025"
-material: laser, photoresistance, contact speaker, mist, water
+material:
+  - laser
+  - photoresistance
+  - contact speaker
+  - mist
+  - water
 category: Sound installation
 event: " "
-venue: Waley Art (TW)
+venue:
+  - Waley Art (TW)
 featuredImage: img0.jpg
 blocks:
   en:

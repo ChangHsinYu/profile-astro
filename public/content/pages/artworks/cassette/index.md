@@ -1,10 +1,12 @@
 ---
 title: Memory Noise
 date: "2021"
-material: tape
+material:
+  - tape
 category: Sound performance
 event: " "
-venue: Taipei National University of the Arts (TW)
+venue:
+  - Taipei National University of the Arts (TW)
 featuredImage: img0.jpg
 blocks:
   en:

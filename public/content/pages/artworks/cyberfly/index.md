@@ -2,10 +2,15 @@
 posttype: work
 title: Cyberfly
 date: "2020"
-material: speaker, microphone, motor
+material:
+  - speaker
+  - microphone
+  - motor
 category: Sound installation
 event: " "
-venue: Taipei National University of the Arts (TW), Taipei Artist Village (TW)
+venue:
+  - Taipei National University of the Arts (TW)
+  - Taipei Artist Village (TW)
 featuredImage: img0.jpg
 blocks:
   en:

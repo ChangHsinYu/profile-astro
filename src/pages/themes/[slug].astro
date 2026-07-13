@@ -22,14 +22,20 @@ const works = getThemeWorks(entry);
   <div class="work_main">
   <div class="work_layout">
     <div class="work_side_list">
-      <ul class="theme_card_links">
+      <!-- <ul class="theme_card_links">
         <li>
           <a href="javascript:history.back()">Back</a>
           <div style="height: 3rem;"></div>
         </li>
+      </ul> -->
+      <div class="ttl" data-lang="en">{titleEn}</div> 
+      <div class="ttl" data-lang="zh">{titleZh}</div>
+      </br>
+      <ul class="theme_card_links">
+        <li data-lang="en">{introductionEh}<br /></li>
+        <li data-lang="zh">{introductionZh}<br /></li>
       </ul>
-      <p style="display: inline-block;font-size:0.8rem; border-bottom: 1px solid #000;">Related works</p>
-      <!-- <div style="width:50%;margin-top:0;"></div> -->
+      <p style="margin-top:5rem;display: inline-block;font-size:0.8rem; border-bottom: 1px solid #000;">Related works</p>
       {works.length > 0 && (
           <ul class="theme_card_links">
             {works.map((work) => (
@@ -41,7 +47,6 @@ const works = getThemeWorks(entry);
       )}
     </div>
     <div class="work_content">
-    
       {entry.featuredImage && <img class="img" src={entry.featuredImage} alt={titleEn || "theme"} />}
       <div class="ttlbox">
         <div class="ttl" data-lang="en">{titleEn}</div>

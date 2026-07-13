@@ -1,19 +1,23 @@
 ---
 title: Dive in Architecture
 date: "2023"
-material: max/msp, processing
+material:
+  - max/msp
+  - processing
 category: Audio visual performance
 event: " "
-venue: Submarine (TW), Universität für künstlerische und industrielle Gestaltung Linz (AT), Tunnel Tokyo (JP), Taipei Fine Arts Museum (TW)
+venue: 
+  - Submarine (TW)
+  - Universität für künstlerische und industrielle Gestaltung Linz (AT)
+  - Tunnel Tokyo (JP)
+  - Taipei Fine Arts Museum (TW)
 featuredImage: img12.jpg
 blocks:
   en:
     - type: text
-      content: |-
-        This work intends to deal with the long and narrow space of the basement, using its architectural structure as the axis of visual and sound development, extending, stacking, and misaligning from different viewpoints, deconstructing the beams, columns, water pipes, and lines that support the operation of the base, like the internal organs of the building. In some parts it interspersed with the imagination of the infinite deep sea outside the submarine.
+      content: This work intends to deal with the long and narrow space of the basement, using its architectural structure as the axis of visual and sound development, extending, stacking, and misaligning from different viewpoints, deconstructing the beams, columns, water pipes, and lines that support the operation of the base, like the internal organs of the building. In some parts it interspersed with the imagination of the infinite deep sea outside the submarine.
     - type: text
-      content: |-
-        The physical feeling of wandering in the ambiguous junction zone alternately changes between virtual and real, sometimes creating a closed feeling of suffocation and sometimes extending to the depths. Enter the immersive field that is separated from the real world, and cut off from the realistic space full of symbols. Calculation flows and flashes of points, lines, and surfaces combined with complex electronic breakbeats are intertwined to stimulate resonance among different senses.
+      content: The physical feeling of wandering in the ambiguous junction zone alternately changes between virtual and real, sometimes creating a closed feeling of suffocation and sometimes extending to the depths. Enter the immersive field that is separated from the real world, and cut off from the realistic space full of symbols. Calculation flows and flashes of points, lines, and surfaces combined with complex electronic breakbeats are intertwined to stimulate resonance among different senses.
     - type: image
       src: img0.jpg
       credit: 林彥翔, 謝佳瑜

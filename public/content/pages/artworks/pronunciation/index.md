@@ -1,10 +1,14 @@
 ---
 title: Pronunciation Exercise
 date: "2021"
-material: max/msp, processing
+material:
+  - max/msp
+  - processing
 category: Audio visual performance
 event: " "
-venue: Forty-Four South Village (TW), Taiwan Contemporary Culture Lab (TW)
+venue:
+  - Forty-Four South Village (TW)
+  - Taiwan Contemporary Culture Lab (TW)
 featuredImage: img0.jpg
 blocks:
   en:

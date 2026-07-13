@@ -2,10 +2,12 @@
 posttype: work
 title: Portal
 date: "2022"
-material: fluorescent tube
+material:
+  - fluorescent tube
 category: Light installation
 event: " "
-venue: Abandoned factory (TW)
+venue:
+  - Abandoned factory (TW)
 featuredImage: img0.jpg
 blocks:
   en:

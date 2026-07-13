@@ -10,15 +10,53 @@ const entry = getEntry("artworks", Astro.params.slug);
 if (!entry) return Astro.redirect("/404");
 const data = entry.data;
 const media = data.media || [];
+
+const materials = Array.isArray(data.material)
+  ? data.material
+  : String(data.material || "")
+      .map((item) => item.trim());
+
+const venues = Array.isArray(data.venue)
+  ? data.venue
+  : String(data.venue || "")
+      .map((item) => item.trim());
 ---
 
 <Layout title={data.title || "Artwork"}>
   <div class="work_main">
+  <div class="work_layout">
+    <div class="work_side_list">
+      <div class="ttl">{data.title}</div><br />
+      <ul class="theme_card_links">
+        <li>{data.category}</li><br />
+        <li>Year : </br>{data.date}</li><br />
+        <li>Materials : </li>
+          {materials.map((material) => (
+            <li style="text-align: left; text-align-last: left; overflow-wrap: break-word;">{material}</li>
+          ))}<br />
+        <li style="text-align: left;">Venues : </li>
+          {venues.map((venue) => (
+            <li style="text-align: left; text-align-last: left; overflow-wrap: break-word;">{venue}</li>
+          ))}<br />
+      </ul>
+    </div>
+
+    <div class="work_content">
     {entry.featuredImage && <img class="img" src={entry.featuredImage} alt={data.title || "artwork"} />}
     <div class="ttlbox">
       <div class="ttl">{data.title}</div>
-      <div class="inf">{data.category}<br />{data.material}<br /><br />{data.date}</div>
+      <div class="inf">
+        {data.category}<br />
+        Year : {data.date}<br />
+        Materials : {materials.map((material) => (
+            <span>{material}, </span>
+          ))}<br/>
+        Venues : {venues.map((venue) => (
+            <span>{venue}, </span>
+          ))}<br /><br />
+      </div>
     </div>
+
     <div data-lang="en" set:html={entry.languageHtml.en} />
     <div data-lang="zh" set:html={entry.languageHtml.zh} />
     <div class="imggrid">
@@ -38,5 +76,7 @@ const media = data.media || [];
         </div>
       ) : null
     ))}
+    </div>
+  </div>
   </div>
 </Layout>

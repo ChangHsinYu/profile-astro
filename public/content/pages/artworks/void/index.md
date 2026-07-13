@@ -1,10 +1,15 @@
 ---
 title: Void
 date: "2024"
-material: max/msp, processing
+material:
+  - max/msp
+  - processing
 category: Audio visual performance
 event: " "
-venue: The Kuala Lumpur Performing Arts Centre (KLPAC), Taiwan Contemporary Culture Lab (TW), National Taiwan University of Arts (TW)
+venue:
+  - The Kuala Lumpur Performing Arts Centre (MY)
+  - Taiwan Contemporary Culture Lab (TW)
+  - National Taiwan University of Arts (TW)
 featuredImage: img0.jpg
 blocks:
   en:

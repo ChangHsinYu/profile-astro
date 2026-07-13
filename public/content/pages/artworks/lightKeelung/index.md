@@ -2,10 +2,14 @@
 posttype: work
 title: Listen to the Light - Keelung ver.
 date: "2025"
-material: solar panels, amplifier chips, led lights
+material:
+  - solar panels
+  - amplifier chips
+  - led lights
 category: Sound installation
 event: 基隆潮藝術
-venue: Xiner Road Air Raid Shelter (TW)
+venue:
+  - Xiner Road Air Raid Shelter (TW)
 featuredImage: img0.jpg
 blocks:
   en:

@@ -2,10 +2,19 @@
 posttype: work
 title: Feeding
 date: "2020"
-material: metal, sound sensor, condenser microphone, speaker, servo motor
+material:
+  - metal
+  - sound sensor
+  - condenser microphone
+  - speaker
+  - servo motor
 category: Sound installation
 event: " "
-venue: Taipei National University of the Arts (TW), Taoyuan Art Center (TW), Kaohsiung Museum of Fine Arts (TW), Universität für künstlerische und industrielle Gestaltung Linz (AT)
+venue:
+  - Taipei National University of the Arts (TW)
+  - Taoyuan Art Center (TW)
+  - Kaohsiung Museum of Fine Arts (TW)
+  - Universität für künstlerische und industrielle Gestaltung Linz (AT)
 featuredImage: img0.jpg
 blocks:
   en:
@@ -23,9 +32,6 @@ blocks:
       credit: CHANG HSIN YU
     - type: image
       src: img2.jpg
-      credit: CHANG HSIN YU
-    - type: image
-      src: img0.jpg
       credit: CHANG HSIN YU
     - type: image
       src: img3.jpg
@@ -66,9 +72,6 @@ blocks:
       credit: CHANG HSIN YU
     - type: image
       src: img2.jpg
-      credit: CHANG HSIN YU
-    - type: image
-      src: img0.jpg
       credit: CHANG HSIN YU
     - type: image
       src: img3.jpg

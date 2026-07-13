@@ -1,10 +1,14 @@
 ---
 title: Creature from Desolate Planet
 date: "2024"
-material: max/msp, processing
+material:
+  - max/msp
+  - processing
 category: Audio visual performance
 event: " "
-venue: National Taiwan Museum of Fine Arts (TW), Lapin et Halot (JP)
+venue:
+  - National Taiwan Museum of Fine Arts (TW)
+  - Lapin et Halot (JP)
 featuredImage: img0.jpg
 blocks:
   en:

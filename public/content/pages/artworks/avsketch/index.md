@@ -1,10 +1,13 @@
 ---
 title: Sketch of Audio Visual
 date: "2020"
-material: max/msp, processing
+material:
+  - max/msp
+  - processing
 category: Audio visual performance
 event: " "
-venue: Taipei National University of the Arts (TW)
+venue:
+  - Taipei National University of the Arts (TW)
 featuredImage: img0.jpg
 blocks:
   en:

@@ -12,13 +12,25 @@ const data = entry.data;
 const media = data.media || [];
 ---
 
-<Layout title={data.title || "Collaboration"}>
+<Layout title={data.title || "Collaborations"}>
   <div class="work_main">
+  <div class="work_layout">
+    <div class="work_side_list">
+      <div class="ttl">{data.title}</div><br />
+      <ul class="theme_card_links">
+        <li>Position : <br />{data.category}</li><br />
+        <li>Year : <br />{data.date}</li><br />
+        <li>Event : <br />{data.event}</li><br />
+      </ul>
+    </div>
+
+    <div class="work_content">
     {entry.featuredImage && <img class="img" src={entry.featuredImage} alt={data.title || "artwork"} />}
     <div class="ttlbox">
       <div class="ttl">{data.title}</div>
-      <div class="inf">{data.category}<br />{data.material}<br /><br />{data.date}</div>
+      <div class="inf">Position : {data.category}<br />{data.material}<br /> Year : {data.date}</div>
     </div>
+
     <div data-lang="en" set:html={entry.languageHtml.en} />
     <div data-lang="zh" set:html={entry.languageHtml.zh} />
     <div class="imggrid">
@@ -38,5 +50,7 @@ const media = data.media || [];
         </div>
       ) : null
     ))}
+    </div>
+  </div>
   </div>
 </Layout>

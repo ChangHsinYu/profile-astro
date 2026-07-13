@@ -1,10 +1,15 @@
 ---
 title: Inert Gas Resonance
 date: "2025"
-material: inert gas, electromagnetic wave microphone, glass, speaker
+material:
+  - inert gas
+  - electromagnetic wave microphone
+  - glass
+  - speaker
 category: Sound installation
 event: " "
-venue: Waley Art (TW)
+venue:
+  - Waley Art (TW)
 featuredImage: img0.jpg
 blocks:
   en:

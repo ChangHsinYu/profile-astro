@@ -1,10 +1,17 @@
 ---
 title: Microbial Ensemble
 date: "2025"
-material: mud, microbial, carbon, water, KCL, agar
+material:
+  - mud
+  - microbial
+  - carbon
+  - water
+  - KCL
+  - agar
 category: Sound installation
 event: " "
-venue: Waley Art (TW)
+venue:
+  - Waley Art (TW)
 featuredImage: img0.jpg
 blocks:
   en:

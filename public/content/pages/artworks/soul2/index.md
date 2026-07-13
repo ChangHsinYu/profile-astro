@@ -2,10 +2,18 @@
 posttype: work
 title: Soul - Vinyl
 date: "2023"
-material: static electricity, stainless steel, aluminum, motor, inductor, electromagnetic waves, speaker
+material:
+  - static electricity
+  - stainless steel
+  - aluminum
+  - motor
+  - inductor
+  - electromagnetic waves
+  - speaker
 category: Sound installation
 event: " "
-venue: Taiwan Contemporary Culture Lab (TW)
+venue:
+  - Taiwan Contemporary Culture Lab (TW)
 featuredImage: img0.jpg
 blocks:
   en:

@@ -1,10 +1,15 @@
 ---
 title: Sun Dairy
 date: "2025"
-material: solar magnetic field data, tape, subwoofer, raspberrypi
+material:
+  - solar magnetic field data
+  - tape
+  - subwoofer
+  - raspberrypi
 category: Sound installation
 event: " "
-venue: Waley Art (TW)
+venue:
+  - Waley Art (TW)
 featuredImage: img0.jpg
 blocks:
   en:

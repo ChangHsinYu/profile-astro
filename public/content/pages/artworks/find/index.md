@@ -2,10 +2,17 @@
 posttype: work
 title: Couldn't Find
 date: "2018"
-material: wood, servo moter, step motor, spoon, screwdriver, screw
+material:
+  - wood
+  - servo moter
+  - step motor
+  - spoon
+  - screwdriver
+  - screw
 category: Installation
 event: " "
-venue: Taipei National University of the Arts (TW)
+venue:
+  - Taipei National University of the Arts (TW)
 featuredImage: img-0.png
 blocks:
   en:

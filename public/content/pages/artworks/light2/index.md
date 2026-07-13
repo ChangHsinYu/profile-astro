@@ -2,10 +2,20 @@
 posttype: work
 title: Listen to the Light - routine
 date: "2024"
-material: solar panels, amplifier chips, led lights, glass, TV, extension cords, candle
+material:
+  - solar panels
+  - amplifier chips
+  - led lights
+  - glass
+  - TV
+  - extension cords
+  - candle
 category: Sound installation
 event: 新竹241藝術空間
-venue: Quartair(NL), 241 Small Space (TW), Lapin et Halot (JP)
+venue:
+  - Quartair(NL)
+  - 241 Small Space (TW)
+  - Lapin et Halot (JP)
 featuredImage: img0.jpg
 blocks:
   en:

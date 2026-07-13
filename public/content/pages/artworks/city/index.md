@@ -1,10 +1,16 @@
 ---
 title: Chaotic City
 date: "2024"
-material: max/msp, processing
+material:
+  - max/msp
+  - processing
 category: Audio visual performance
 event: " "
-venue: Taiwan Contemporary Culture Lab (TW), Digital Art Center Taipei (TW), Taipei Fine Arts Museum (TW), Lapin et Halot (JP)
+venue:
+  - Taiwan Contemporary Culture Lab (TW)
+  - Digital Art Center Taipei (TW)
+  - Taipei Fine Arts Museum (TW)
+  - Lapin et Halot (JP)
 featuredImage: img0.jpg
 blocks:
   en:

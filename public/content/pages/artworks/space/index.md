@@ -1,10 +1,17 @@
 ---
 title: Space Surfing
 date: "2023"
-material: max/msp, processing
+material:
+  - max/msp
+  - processing
 category: Audio visual performance
 event: " "
-venue: National Taiwan Science Education Center (TW), Luodong Cultural Working House (TW), Universität für künstlerische und industrielle Gestaltung Linz (AT), Tunnel Tokyo (JP), Taipei Fine Arts Museum (TW)
+venue:
+  - National Taiwan Science Education Center (TW)
+  - Luodong Cultural Working House (TW)
+  - Universität für künstlerische und industrielle Gestaltung Linz (AT)
+  - Tunnel Tokyo (JP)
+  - Taipei Fine Arts Museum (TW)
 featuredImage: img0.jpg
 blocks:
   en:

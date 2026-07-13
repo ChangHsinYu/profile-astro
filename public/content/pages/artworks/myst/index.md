@@ -2,10 +2,18 @@
 posttype: work
 title: Myst
 date: "2023"
-material: laser, photoresistance, contact speaker, mist, water, pvc board
+material:
+  - laser
+  - photoresistance
+  - contact speaker
+  - mist
+  - water
+  - pvc board
 category: Sound installation
 event: " "
-venue: National Taiwan Museum of Fine Arts (TW), Taiwan Contemporary Culture Lab (TW)
+venue:
+  - National Taiwan Museum of Fine Arts (TW)
+  - Taiwan Contemporary Culture Lab (TW)
 featuredImage: img0.jpg
 blocks:
   en:

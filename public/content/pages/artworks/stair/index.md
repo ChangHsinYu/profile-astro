@@ -2,10 +2,12 @@
 posttype: work
 title: Stairway to Nothing
 date: "2018"
-material: wood
+material:
+  - wood
 category: Installation
 event: " "
-venue: Taipei National University of the Arts (TW)
+venue:
+  - Taipei National University of the Arts (TW)
 featuredImage: img0.jpg
 blocks:
   en:

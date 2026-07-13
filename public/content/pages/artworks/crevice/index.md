@@ -1,10 +1,15 @@
 ---
 title: Aftershocks in the Crevice
 date: "2025"
-material: rock, crevice, vinyl, resonance speaker
+material:
+  - rock
+  - crevice
+  - vinyl
+  - resonance speaker
 category: Sound installation
 event: " "
-venue: Waley Art (TW)
+venue:
+  - Waley Art (TW)
 featuredImage: img0.jpg
 blocks:
   en:

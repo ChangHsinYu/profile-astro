@@ -2,10 +2,14 @@
 posttype: work
 title: "&#x611b"
 date: "2020"
-material: raspberry pi, LCD display, speaker
+material:
+  - raspberry pi
+  - LCD display
+  - speaker
 category: Sound installation
 event: " "
-venue: Songshan Cultural and Creative Park (TW)
+venue:
+  - Songshan Cultural and Creative Park (TW)
 featuredImage: img0.jpg
 blocks:
   en:
