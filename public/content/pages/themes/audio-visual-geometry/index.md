@@ -11,9 +11,4 @@ works:
     slug: zebra
   - title: Sketch of Audio Visual
     slug: avsketch
-description:
-  en: ''
-  zh: ''
-media: []
 ---
-

@@ -28,7 +28,7 @@
   text-align:left;
 }
 
-.theme_card_description{
+.theme_card_introduction{
   font-size:0.65rem;
   font-weight:300;
   letter-spacing:0.03rem;
@@ -76,7 +76,13 @@
     font-size:1.2rem;
   }
 
-  .theme_card_description{
+  .theme_card_introduction{
     font-size:0.65rem;
   }
+  .theme_card_links{
+  font-size:0.8rem;
+  letter-spacing:0.04rem;
+  line-height:1.4rem;
+  margin:0;
+}
 }

@@ -11,9 +11,4 @@ works:
     slug: archi
   - title: Creature from Desolate Planet
     slug: creatur
-description:
-  en: ''
-  zh: ''
-media: []
 ---
-

@@ -119,25 +119,130 @@ function normalizeDescription(description) {
 function normalizeMedia(media, category, slug) {
   if (!Array.isArray(media)) return [];
 
-  return media.map((item) => {
-    if (item.type === "image") {
-      return {
-        ...item,
-        src: publicPath(category, slug, item.src)
-      };
-    }
+  return media.map((item) => normalizeMediaItem(item, category, slug)).filter(Boolean);
+}
 
-    if (item.type === "video" || item.type === "iframe") {
-      return {
-        ...item,
-        type: "video",
-        title: item.title || "video",
-        allow: item.allow || "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      };
-    }
+function normalizeMediaItem(item, category, slug) {
+  if (!item || typeof item !== "object") return null;
 
-    return item;
-  });
+  if (item.type === "image") {
+    return {
+      ...item,
+      src: item.src?.startsWith("http") ? item.src : publicPath(category, slug, item.src)
+    };
+  }
+
+  if (item.type === "video" || item.type === "iframe") {
+    return {
+      ...item,
+      type: "video",
+      title: item.title || "video",
+      allow:
+        item.allow ||
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    };
+  }
+
+  return item;
+}
+
+function normalizeTextBlock(block) {
+  const content = block.content || block.text || "";
+  return {
+    ...block,
+    type: "text",
+    html: marked.parse(content)
+  };
+}
+
+function normalizeBlock(block, category, slug) {
+  if (!block || typeof block !== "object") return null;
+
+  if (block.type === "text") {
+    return normalizeTextBlock(block);
+  }
+
+  if (block.type === "image" || block.type === "video" || block.type === "iframe") {
+    return normalizeMediaItem(block, category, slug);
+  }
+
+  return block;
+}
+
+function normalizeLanguageBlocks(blocks, category, slug) {
+  if (!Array.isArray(blocks)) return [];
+
+  return blocks
+    .map((block) => normalizeBlock(block, category, slug))
+    .filter(Boolean);
+}
+
+function blocksFromDescriptionAndMedia(description, media) {
+  const en = [];
+  const zh = [];
+
+  if (description.en) {
+    en.push({
+      type: "text",
+      content: description.en,
+      html: marked.parse(description.en)
+    });
+  }
+
+  if (description.zh) {
+    zh.push({
+      type: "text",
+      content: description.zh,
+      html: marked.parse(description.zh)
+    });
+  }
+
+  en.push(...media);
+  zh.push(...media);
+
+  return {
+    en,
+    zh: zh.length ? zh : en
+  };
+}
+
+function normalizeBlocks(blocks, description, media, category, slug) {
+  if (!blocks) {
+    return blocksFromDescriptionAndMedia(description, media);
+  }
+
+  if (Array.isArray(blocks)) {
+    const normalized = normalizeLanguageBlocks(blocks, category, slug);
+    return {
+      en: normalized,
+      zh: normalized
+    };
+  }
+
+  const en = normalizeLanguageBlocks(blocks.en || blocks.zh || [], category, slug);
+  const zh = normalizeLanguageBlocks(blocks.zh || blocks.en || [], category, slug);
+
+  return {
+    en,
+    zh: zh.length ? zh : en
+  };
+}
+
+function blocksToHtml(blocks) {
+  return blocks
+    .map((block) => {
+      // if (block.type === "text") return block.html || "";
+      if (block.type === "text") return `<div class="dscrptn">${block.content}</div>` || "";
+      if (block.type === "image") {
+        const credit = block.credit ? `<div class="photocredit">(photo by : ${block.credit})</div>` : "";
+        return `<div class="box"><img class="subimg" src="${block.src}" alt="${block.alt || ""}" />${credit}</div>`;
+      }
+      if (block.type === "video") {
+        return `<iframe title="${block.title || "video"}" src="${block.src}" frameborder="0" allow="${block.allow || ""}" allowfullscreen></iframe>`;
+      }
+      return "";
+    })
+    .join("\n") + '\n<div class="box"></div>';
 }
 
 function normalizeWorks(works) {
@@ -179,6 +284,7 @@ export function getEntry(category, slug) {
 
   const description = normalizeDescription(rawData.description);
   const media = normalizeMedia(rawData.media, category, slug);
+  const blocks = normalizeBlocks(rawData.blocks, description, media, category, slug);
   const works = normalizeWorks(rawData.works);
 
   const html = normalizeHtml(marked.parse(parsed.content || ""), category, slug);
@@ -187,6 +293,7 @@ export function getEntry(category, slug) {
     ...rawData,
     description,
     media,
+    blocks,
     works
   };
 
@@ -197,8 +304,8 @@ export function getEntry(category, slug) {
     data,
     html,
     languageHtml: {
-      en: description.en,
-      zh: description.zh
+      en: blocksToHtml(blocks.en),
+      zh: blocksToHtml(blocks.zh)
     },
     featuredImage: firstExistingImage(dir, category, slug, rawData.featuredImage)
   };

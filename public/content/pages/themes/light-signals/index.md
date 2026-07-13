@@ -13,10 +13,11 @@ works:
     slug: light2
   - title: Listen to the Light
     slug: light
-    
-description:
-  en: 'Works that listen to flicker and hidden messages carried by light.'
-  zh: 以光源中隱藏的訊號為線索所發展的作品。
-media: []
+blocks:
+  en:
+    - type: text
+      content: Works that listen to flicker and hidden messages carried by light.
+  zh:
+    - type: text
+      content: 以光源中隱藏的訊號為線索所發展的作品。
 ---
-

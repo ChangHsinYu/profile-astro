@@ -9,11 +9,13 @@ works:
     slug: cyberfly
   - title: Cross
     slug: cross
-  - title: &#x611b
+  - title: "&#x611b"
     slug: x611b
-description:
-  en: 'Speakers'
-  zh: 喇叭
-media: []
+blocks:
+  en:
+    - type: text
+      content: Speakers
+  zh:
+    - type: text
+      content: 喇叭
 ---
-

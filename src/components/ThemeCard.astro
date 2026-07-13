@@ -8,8 +8,8 @@ const works = getThemeWorks(entry);
 
 const titleEn = data.title_en || data.title?.en || data.title || data.title_zh;
 const titleZh = data.title_zh || data.title?.zh || data.title || data.title_en;
-const descriptionEn = data.description?.en || data.description_en || "";
-const descriptionZh = data.description?.zh || data.description_zh || descriptionEn;
+const introductionEn = data.introduction?.en || data.introduction_en || "";
+const introductionZh = data.introduction?.zh || data.introduction_zh || introductionEn;
 ---
 <div class="theme_card" id={`theme-${entry.slug}`}>
   <a href={entry.href}>
@@ -20,8 +20,8 @@ const descriptionZh = data.description?.zh || data.description_zh || description
     <h2 class="theme_card_title" data-lang="en">{titleEn}</h2>
     <h2 class="theme_card_title" data-lang="zh">{titleZh}</h2>
 
-    {descriptionEn && <p class="theme_card_description" data-lang="en">{descriptionEn}</p>}
-    {descriptionZh && <p class="theme_card_description" data-lang="zh">{descriptionZh}</p>}
+    {introductionEn && <p class="theme_card_introduction" data-lang="en">{introductionEn}</p>}
+    {introductionZh && <p class="theme_card_introduction" data-lang="zh">{introductionZh}</p>}
   </a>
   {works.length > 0 && (
     <ul class="theme_card_works">

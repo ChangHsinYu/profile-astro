@@ -15,11 +15,13 @@ works:
     slug: feeding
   - title: Cross
     slug: cross
-  - title: &#x611b
+  - title: "&#x611b"
     slug: x611b
-description:
-  en: 'generative'
-  zh: 生成
-media: []
+blocks:
+  en:
+    - type: text
+      content: generative
+  zh:
+    - type: text
+      content: 生成
 ---
-

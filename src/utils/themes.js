@@ -1,7 +1,7 @@
 import { getEntries } from "./content.js";
 
 const themeOrder = [
-  "Sonic Alchemy (Solo Exhibition)",
+  "Sonic Alchemy",
   "Geometry",
   "The System",
   "Audio Visual Animate",
