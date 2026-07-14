@@ -62,7 +62,7 @@
   float: none;
 }
 
-@media screen and (min-width:800px){
+@media screen and (min-width:600px){
   .project{
     width:24%;
     height:auto;

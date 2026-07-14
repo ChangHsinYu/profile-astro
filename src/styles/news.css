@@ -38,7 +38,7 @@
   font-weight: 700;
 }
 
-@media screen and (min-width:800px){
+@media screen and (min-width:600px){
   .aa_news{
     text-decoration: none;
     color: #000000;

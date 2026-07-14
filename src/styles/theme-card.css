@@ -59,7 +59,7 @@
 .theme_card_works a{color:#888888;}
 .theme_card_works a:hover{color:#000000;}
 
-@media screen and (min-width:800px){
+@media screen and (min-width:600px){
   .theme{
     display:inline-block;
     width:32%;

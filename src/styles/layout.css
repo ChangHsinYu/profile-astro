@@ -207,7 +207,7 @@ html[data-language="zh"] [data-lang="zh"]{
   float: none;
 }
 
-@media screen and (min-width:800px){
+@media screen and (min-width:600px){
   body{
     width:70%;
     margin:auto;
