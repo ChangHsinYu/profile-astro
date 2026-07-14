@@ -28,8 +28,11 @@ const languages = [
               <span class="cv_title">{section.title}</span><br /><br />
               {section.items?.map((item) => (
                 <div class="cv_item">
-                  <div class="cv_year">{item.year}</div><div class="cv_inf">{item.text}</div><br />
-                  <div class="cv_year"></div><div class="cv_inf"><hr /></div>
+                  <div class="cv_year">{item.year}</div>
+                  <div class="cv_inf" style="border-bottom: 1px solid #000;">
+                    {item.text}
+                  </div>
+                  <br />
                 </div>
               ))}
               <br />

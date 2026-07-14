@@ -1,6 +1,6 @@
 .cv_content{
   font-family: 'Kumbh Sans', sans-serif;
-  width:90%;
+  width:100%;
   margin: auto;
   margin-top:50px;
   margin-bottom:50px;
@@ -20,12 +20,12 @@
   padding-left:0;
 }
 .cv_inf{
-  width:90%;
+  width:100%;
   display: inline-block;
 }
 .cv_year{
   vertical-align: top;
-  width:10%;
+  width:100%;
   height:auto;
   display: inline-block;
 }
@@ -40,6 +40,13 @@
   display: flex;
   font-size: 0.75rem;
   justify-content: center;
+}
+.cv_item{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 10fr;
+  column-gap: 5%;
+  align-items: start;
 }
 
 @media screen and (min-width:800px){
@@ -71,12 +78,12 @@
     padding-left: 0;
   }
   .cv_inf{
-    width:90%;
+    width:100%;
     display: inline-block;
   }
   .cv_year{
     vertical-align: top;
-    width:10%;
+    width:100%;
     height:auto;
     display: inline-block;
   }

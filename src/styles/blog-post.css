@@ -20,7 +20,7 @@
   font-weight: 300;
   width:100%;
   margin-top: 10px;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   letter-spacing: 0.05rem;
   text-align: left;
   line-height:2rem;
@@ -82,7 +82,7 @@ iframe{
   .work_content {
     width: 100%;
   }
-@media screen and (min-width:1000px){
+@media screen and (min-width:800px){
   .img{
     width: 100%;
   }

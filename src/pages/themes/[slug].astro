@@ -39,7 +39,7 @@ const works = getThemeWorks(entry);
       {works.length > 0 && (
           <ul class="theme_card_links">
             {works.map((work) => (
-              <li>
+              <li style="text-align: left; text-align-last: left; overflow-wrap: break-word;">
                 <a href={work.href}>{work.title}</a>
               </li>
             ))}

@@ -35,17 +35,8 @@
 .work_inf2{
   display: none;
 }
-@media screen and (min-width:600px){
-  .work{
-    /* position: relative; */
-    display:inline-block;
-    width:24.5%;
-    height:auto;
-/*    margin-bottom:100px;*/
-    float: none;
-  }
-}
-@media screen and (min-width:1200px){
+
+@media screen and (min-width:800px){
   .work{
     /* position: relative; */
     display:inline-block;
