@@ -63,7 +63,7 @@
   }
   .cv_content_language{
     vertical-align: top;
-    width:60%;
+    width:80%;
     font-size: 0.8rem;
     letter-spacing: 0.05rem;
     line-height:1.2rem;
@@ -89,5 +89,12 @@
   }
   .cv_title{
     font-weight: 700;
+  }
+  .cv_item{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 10fr;
+    column-gap: 5%;
+    align-items: start;
   }
 }

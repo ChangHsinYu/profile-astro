@@ -80,6 +80,18 @@ blocks:
     - type: image
       src: img18.jpg
       credit: "helloworld futurearts by : kito li"
+    - type: image
+      src: img19.jpg
+      credit: 0-1 gallery
+    - type: image
+      src: img20.jpg
+      credit: 0-1 gallery
+    - type: image
+      src: img21.jpg
+      credit: 0-1 gallery
+    - type: image
+      src: img22.jpg
+      credit: 0-1 gallery
     - type: video
       src: https://player.vimeo.com/video/936939354?h=b0dcd1ceb2
       title: vimeo-player
@@ -146,6 +158,18 @@ blocks:
     - type: image
       src: img18.jpg
       credit: "helloworld futurearts by : kito li"
+    - type: image
+      src: img19.jpg
+      credit: 0-1 gallery
+    - type: image
+      src: img20.jpg
+      credit: 0-1 gallery
+    - type: image
+      src: img21.jpg
+      credit: 0-1 gallery
+    - type: image
+      src: img22.jpg
+      credit: 0-1 gallery
     - type: video
       src: https://player.vimeo.com/video/936939354?h=b0dcd1ceb2
       title: vimeo-player

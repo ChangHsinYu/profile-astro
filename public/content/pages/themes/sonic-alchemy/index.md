@@ -16,8 +16,8 @@ works:
   - title: Sun Dairy
     slug: sun
 introduction:
-  en: solo exhibition
-  zh: 個展
+  en: This exhibition, as a phase of research and experimentation, focuses on the possibility of natural elements as a medium for sound, exploring the conditions and mechanisms of sound generation through the interaction between different substances.
+  zh: 本展覽作為一項階段性的研究與實驗，聚焦於自然元素作為聲音媒介的可能性，透過不同物質之間的交互作用，探討聲音生成的條件與機制。
 blocks:
   en:
     - type: text
@@ -31,7 +31,7 @@ blocks:
         I believe that the function of an object often conceals its material existence. Noise, misuse, and malfunction, however, offer opportunities to encounter it anew. When an object departs from its intended use—or when its prescribed function begins to fail—the physical qualities normally hidden beneath utility start to emerge. The sounds it produces are no longer incidental noise, but manifestations of the material's own condition. When these sounds exceed our habitual expectations, perception momentarily fractures. It is within this brief rupture that curiosity and imagination often arise, much like splitting open a stone and unexpectedly discovering a vein of jade beneath its surface.
     - type: text
       content: >-
-        The Art of Sonic Alchemy is built around the idea of "transmuting sound." For me, alchemy does not simply mean making or manufacturing; it describes a process in which different elements interact through the application of energy. That energy may take the form of electricity, heat, vibration, interference, or any other condition capable of transforming the state of matter. To transmute sound is to create situations in which materials generate sound according to their own physical properties, allowing new relationships to emerge through their interactions. Sound is therefore not a predetermined outcome but a trace left behind by encounters between different forms of matter. Perhaps, through these interactions, sound can momentarily crystallize into something both fragile and poetic, inviting us to perceive once again those material realities that everyday function has long concealed.
+        My solo exhibition "Sonic Alchemy" is built around the idea of "transmuting sound." For me, alchemy does not simply mean making or manufacturing; it describes a process in which different elements interact through the application of energy. That energy may take the form of electricity, heat, vibration, interference, or any other condition capable of transforming the state of matter. To transmute sound is to create situations in which materials generate sound according to their own physical properties, allowing new relationships to emerge through their interactions. Sound is therefore not a predetermined outcome but a trace left behind by encounters between different forms of matter. Perhaps, through these interactions, sound can momentarily crystallize into something both fragile and poetic, inviting us to perceive once again those material realities that everyday function has long concealed.
     - type: image
       src: img0.jpg
       credit: 張欣語
@@ -66,7 +66,7 @@ blocks:
         我認為，一件物品的功能往往遮蔽了它自身的物性，而雜訊、誤用或故障，反而提供了重新認識它的契機。當一個物件偏離原本的使用方式，或部分失去既定功能時，那些平時隱藏於功能背後的物理特性便開始顯現。它所產生的聲音不再只是附帶的噪音，而是材料自身狀態的展現。當這些聲響超出我們既有的經驗與預期時，感知便會產生短暫的斷裂，而趣味與想像也往往從這道裂縫中浮現，如同切開一塊石頭，在斷裂面意外發現一抹玉色。
     - type: text
       content: 
-        《煉聲術》以「煉成聲音」作為整個展覽的核心想像。對我而言，「煉」並非單純的製造，而是一個使不同元素彼此作用並施加能量的過程；這個能量可以是通電、加熱、震動、干擾，或其他足以改變物質狀態的條件。所謂「煉聲」，便是在這些條件下，使不同材料依循自身的物性產生聲音，並透過它們之間的交互作用，建立新的關係。聲音在這裡並非預先設計的結果，而更像是不同物質相遇之後自然形成的痕跡。或許，在這些媒介彼此作用的過程中，聲音能夠凝聚成一種短暫而具詩意的結晶，使人重新感知那些原本被日常功能所掩蓋的物。
+        個展《煉聲術》以「煉成聲音」作為整個展覽的核心想像。對我而言，「煉」並非單純的製造，而是一個使不同元素彼此作用並施加能量的過程；這個能量可以是通電、加熱、震動、干擾，或其他足以改變物質狀態的條件。所謂「煉聲」，便是在這些條件下，使不同材料依循自身的物性產生聲音，並透過它們之間的交互作用，建立新的關係。聲音在這裡並非預先設計的結果，而更像是不同物質相遇之後自然形成的痕跡。或許，在這些媒介彼此作用的過程中，聲音能夠凝聚成一種短暫而具詩意的結晶，使人重新感知那些原本被日常功能所掩蓋的物。
     - type: image
       src: img0.jpg
       credit: 張欣語

@@ -2,10 +2,10 @@ import { getEntries } from "./content.js";
 
 const themeOrder = [
   "Sonic Alchemy",
-  "Geometry",
-  "The System",
-  "Audio Visual Animate",
   "Light as Signal",
+  "The System",
+  "Geometry",
+  "Audio Visual Animate",
   "Wrong Sound"
 ];
 
