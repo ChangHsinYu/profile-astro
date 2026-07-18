@@ -1,82 +1,95 @@
 ---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
-import { getEntries, getEntry } from "../../utils/content.js";
+import ContentBlocks from "../../components/ContentBlocks.astro";
 
-export function getStaticPaths() {
-  return getEntries("artworks").map((entry) => ({ params: { slug: entry.slug } }));
+export async function getStaticPaths() {
+  const entries = await getCollection("artworks");
+
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
 }
 
-const entry = getEntry("artworks", Astro.params.slug);
-if (!entry) return Astro.redirect("/404");
+const { entry } = Astro.props;
 const data = entry.data;
-const media = data.media || [];
 
 const materials = Array.isArray(data.material)
   ? data.material
   : String(data.material || "")
-      .map((item) => item.trim());
+      .split(",")
+      .map((item) => item.trim())
+      .filter(Boolean);
 
 const venues = Array.isArray(data.venue)
   ? data.venue
   : String(data.venue || "")
-      .map((item) => item.trim());
+      .split(",")
+      .map((item) => item.trim())
+      .filter(Boolean);
+
+const blocksEn = data.blocks?.en || [];
+const blocksZh = data.blocks?.zh || blocksEn;
 ---
 
 <Layout title={data.title || "Artwork"}>
   <div class="work_main">
-  <div class="work_layout">
-    <div class="work_side_list">
-      <div class="ttl">{data.title}</div><br />
-      <ul class="theme_card_links">
-        <li>{data.category}</li><br />
-        <li>Year : </br>{data.date}</li><br />
-        <li>Materials : </li>
-          {materials.map((material) => (
-            <li style="text-align: left; text-align-last: left; overflow-wrap: break-word;">{material}</li>
-          ))}<br />
-        <li style="text-align: left;">Venues : </li>
-          {venues.map((venue) => (
-            <li style="text-align: left; text-align-last: left; overflow-wrap: break-word;">{venue}</li>
-          ))}<br />
-      </ul>
-    </div>
+    <div class="work_layout">
+      <div class="work_side_list">
+        <div class="ttl">{data.title}</div><br />
 
-    <div class="work_content">
-    {entry.featuredImage && <img class="img" src={entry.featuredImage} alt={data.title || "artwork"} />}
-    <div class="ttlbox">
-      <div class="ttl">{data.title}</div>
-      <div class="inf">
-        {data.category}<br />
-        Year : {data.date}<br />
-        Materials : {materials.map((material) => (
-            <span>{material}, </span>
-          ))}<br/>
-        Venues : {venues.map((venue) => (
-            <span>{venue}, </span>
-          ))}<br /><br />
+        <ul class="theme_card_links">
+          {data.category && <li>{data.category}</li>}
+          <br />
+
+          {data.date && <li>Year : <br />{data.date}</li>}
+          <br />
+
+          {materials.length > 0 && <li>Materials : </li>}
+          {materials.map((material) => (
+            <li style="text-align: left; text-align-last: left; overflow-wrap: break-word;">
+              {material}
+            </li>
+          ))}
+          <br />
+
+          {venues.length > 0 && <li style="text-align: left;">Venues : </li>}
+          {venues.map((venue) => (
+            <li style="text-align: left; text-align-last: left; overflow-wrap: break-word;">
+              {venue}
+            </li>
+          ))}
+          <br />
+        </ul>
+      </div>
+
+      <div class="work_content">
+        {data.featuredImage && (
+          <Image
+            class="img"
+            src={data.featuredImage}
+            alt={data.title || "artwork"}
+            widths={[800, 1200, 1800, 2200]}
+            format="webp"
+          />
+        )}
+
+        <div class="ttlbox">
+          <div class="ttl">{data.title}</div>
+          <div class="inf">
+            {data.category}<br />
+            {data.date && <>Year : {data.date}<br /></>}
+            {materials.length > 0 && <>Materials : {materials.join(", ")}<br /></>}
+            {venues.length > 0 && <>Venues : {venues.join(", ")}<br /></>}
+            <br />
+          </div>
+        </div>
+
+        <ContentBlocks blocks={blocksEn} lang="en" title={data.title} />
+        <ContentBlocks blocks={blocksZh} lang="zh" title={data.title} />
       </div>
     </div>
-
-    <div data-lang="en" set:html={entry.languageHtml.en} />
-    <div data-lang="zh" set:html={entry.languageHtml.zh} />
-    <div class="imggrid">
-    {media.map((item) => (
-      item.type === "image" ? (
-        <div class="box">
-          <img class="subimg" src={item.src} alt={item.alt || data.title || "artwork image"} />
-          {item.credit && <div class="photocredit">(photo by : {item.credit})</div>}
-        </div>
-      ) : null
-    ))}
-  </div>
-  {media.map((item) => (
-      item.type === "video" ? (
-        <div>
-          <iframe title={item.title || data.title || "video"} src={item.src} frameborder="0" allow={item.allow} allowfullscreen></iframe>
-        </div>
-      ) : null
-    ))}
-    </div>
-  </div>
   </div>
 </Layout>

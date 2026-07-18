@@ -1,11 +1,29 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ArtworkCard from "../components/ArtworkCard.astro";
-import { getOrderedEntries } from "../utils/content.js";
+import { getCollection } from "astro:content";
 
-const entries = getOrderedEntries("collaborations");
+const categoryOrder = [
+  "Creative Coding",
+  "Sound and Visual",
+  "Sound",
+  "Visual",
+  "Performance",
+  "Installation",
+  "Other"
+];
 
-const categoryOrder = ["Creative Coding", "Sound and Visual", "Sound", "Visual", "Performance", "Installation", "Other"];
+function getYear(entry) {
+  const date = String(entry.data.date || "");
+  const match = date.match(/\d{4}/);
+  return match ? Number(match[0]) : 0;
+}
+
+function sortByYear(entries) {
+  return [...entries].sort((a, b) => getYear(b) - getYear(a));
+}
+
+const entries = await getCollection("collaborations");
 
 const groupedEntries = entries.reduce((groups, entry) => {
   const category = entry.data.category || "Other";
@@ -18,30 +36,33 @@ const groupedEntries = entries.reduce((groups, entry) => {
   return groups;
 }, {});
 
+Object.keys(groupedEntries).forEach((category) => {
+  groupedEntries[category] = sortByYear(groupedEntries[category]);
+});
+
 const categories = [
   ...categoryOrder.filter((category) => groupedEntries[category]),
   ...Object.keys(groupedEntries).filter((category) => !categoryOrder.includes(category))
 ];
-
 ---
 
 <style>
   .work_catagery {
     letter-spacing: 0.05rem;
-    font-size:0.65rem;
-    width:100%;
-    text-align:left;
-    margin-top:50px;
+    font-size: 0.65rem;
+    width: 100%;
+    text-align: left;
+    margin-top: 50px;
   }
 
-  @media screen and (min-width:800px){
+  @media screen and (min-width: 800px) {
     .work_catagery {
       letter-spacing: 0.05rem;
-      font-size:0.8rem;
-      margin-top:0;
-      width:100%;
-      height:50px;
-      text-align:left;
+      font-size: 0.8rem;
+      margin-top: 0;
+      width: 100%;
+      height: 50px;
+      text-align: left;
     }
   }
 </style>
@@ -50,7 +71,6 @@ const categories = [
   <div class="work_main">
     {categories.map((category) => {
       const categoryEntries = groupedEntries[category];
-      // const placeholderCount = Math.max(0, 5 - categoryEntries.length);
       const columns = 5;
       const placeholderCount = (columns - (categoryEntries.length % columns)) % columns;
 
@@ -62,9 +82,9 @@ const categories = [
           </div>
 
           <div style="width:100%;display:flex;justify-content:space-between;flex-wrap:wrap;margin-top:10px;">
-            {groupedEntries[category].map((entry) => (
+            {categoryEntries.map((entry) => (
               <div class="work">
-                <ArtworkCard entry={entry} />
+                <ArtworkCard entry={entry} category="collaborations" />
               </div>
             ))}
 

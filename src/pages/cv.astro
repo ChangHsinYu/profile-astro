@@ -1,9 +1,12 @@
 ---
+import { Image } from "astro:assets";
+import { getEntry } from "astro:content";
 import Layout from "../layouts/Layout.astro";
-import { getEntry } from "../utils/content.js";
 
-const entry = getEntry("cv", "main");
+const entry = await getEntry("cv", "main");
 const cv = entry?.data.cv || {};
+const portrait = entry?.data.portrait;
+
 const languages = [
   ["en", cv.en],
   ["zh", cv.zh]
@@ -12,13 +15,24 @@ const languages = [
 
 <Layout title="chang hsin-yu 張欣語 cv">
   <div class="work_main">
-    <!-- <div class="cv_img cv_img_placeholder">Portrait image missing from source zip</div> -->
-    <img class="cv_img" src="/content/pages/cv/main/portrait.jpg" alt="Chang Hsin-Yu portrait" />
+    {portrait && (
+      <div class="cv_img">
+        <Image
+          class="img"
+          src={portrait}
+          alt="Chang Hsin-Yu portrait"
+          widths={[400, 800, 1200]}
+          format="webp"
+        />
+      </div>
+    )}
+
     <div class="cv_content">
       {languages.map(([language, content]) => (
         <div class="cv_content_language" data-lang={language}>
           <div style="font-size:1.4rem">{content.name}<br /></div>
           <br />
+
           {content.bio && <div>{content.bio}</div>}
           <br />
           <br />
@@ -26,6 +40,7 @@ const languages = [
           {content.sections?.map((section) => (
             <div>
               <span class="cv_title">{section.title}</span><br /><br />
+
               {section.items?.map((item) => (
                 <div class="cv_item">
                   <div class="cv_year">{item.year}</div>
@@ -35,6 +50,7 @@ const languages = [
                   <br />
                 </div>
               ))}
+
               <br />
               <br />
             </div>

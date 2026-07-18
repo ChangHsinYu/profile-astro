@@ -1,42 +1,92 @@
 ---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
-import { getEntries, getEntry } from "../../utils/content.js";
-import { getThemeWorks } from "../../utils/themes.js";
+import ContentBlocks from "../../components/ContentBlocks.astro";
 
-export function getStaticPaths() {
-  return getEntries("themes").map((entry) => ({ params: { slug: entry.slug } }));
+export async function getStaticPaths() {
+  const entries = await getCollection("themes");
+
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
 }
 
-const entry = getEntry("themes", Astro.params.slug);
-if (!entry) return Astro.redirect("/404");
-
+const { entry } = Astro.props;
 const data = entry.data;
+
+function getTitleText(title) {
+  if (!title) return "";
+  if (typeof title === "string") return title;
+  return title.en || title.zh || "";
+}
+
+function getEntryTitle(entry) {
+  return (
+    getTitleText(entry.data.title) ||
+    entry.data.title_en ||
+    entry.data.title_zh ||
+    entry.slug
+  );
+}
+
+function getEntryHref(category, entry) {
+  return `/${category}/${entry.slug}/`;
+}
+
+function normalizeWork(work, artworks) {
+  const bySlug = new Map(artworks.map((entry) => [entry.slug, entry]));
+  const byTitle = new Map(artworks.map((entry) => [getEntryTitle(entry), entry]));
+
+  if (typeof work === "string") {
+    const artwork = byTitle.get(work);
+
+    return {
+      title: work,
+      href: artwork ? getEntryHref("artworks", artwork) : "#"
+    };
+  }
+
+  const title = getTitleText(work.title);
+  const artwork = work.slug ? bySlug.get(work.slug) : byTitle.get(title);
+
+  return {
+    title: title || getEntryTitle(artwork) || "",
+    href: artwork ? getEntryHref("artworks", artwork) : work.slug ? `/artworks/${work.slug}/` : "#"
+  };
+}
+
 const titleEn = data.title_en || data.title?.en || data.title || data.title_zh;
 const titleZh = data.title_zh || data.title?.zh || data.title || data.title_en;
-const introductionEh = data.introduction_en || data.introduction?.en || data.introduction || data.introduction_zh;
+const introductionEn = data.introduction_en || data.introduction?.en || data.introduction || data.introduction_zh;
 const introductionZh = data.introduction_zh || data.introduction?.zh || data.introduction || data.introduction_en;
-const works = getThemeWorks(entry);
+
+const blocksEn = data.blocks?.en || [];
+const blocksZh = data.blocks?.zh || blocksEn;
+
+const artworks = await getCollection("artworks");
+const works = (data.works || []).map((work) => normalizeWork(work, artworks));
 ---
 
 <Layout title={titleEn || "Theme"}>
   <div class="work_main">
-  <div class="work_layout">
-    <div class="work_side_list">
-      <!-- <ul class="theme_card_links">
-        <li>
-          <a href="javascript:history.back()">Back</a>
-          <div style="height: 3rem;"></div>
-        </li>
-      </ul> -->
-      <div class="ttl" data-lang="en">{titleEn}</div> 
-      <div class="ttl" data-lang="zh">{titleZh}</div>
-      </br>
-      <ul class="theme_card_links">
-        <li data-lang="en" style="text-align: left;">{introductionEh}<br /></li>
-        <li data-lang="zh" style="text-align: left;">{introductionZh}<br /></li>
-      </ul>
-      <p style="margin-top:5rem;display: inline-block;font-size:0.8rem; border-bottom: 1px solid #000;">Related works</p>
-      {works.length > 0 && (
+    <div class="work_layout">
+      <div class="work_side_list">
+        <div class="ttl" data-lang="en">{titleEn}</div>
+        <div class="ttl" data-lang="zh">{titleZh}</div>
+        <br />
+
+        <ul class="theme_card_links">
+          {introductionEn && <li data-lang="en" style="text-align: left;">{introductionEn}<br /></li>}
+          {introductionZh && <li data-lang="zh" style="text-align: left;">{introductionZh}<br /></li>}
+        </ul>
+
+        <p style="margin-top:5rem;display: inline-block;font-size:0.8rem; border-bottom: 1px solid #000;">
+          Related works
+        </p>
+
+        {works.length > 0 && (
           <ul class="theme_card_links">
             {works.map((work) => (
               <li style="text-align: left; text-align-last: left; overflow-wrap: break-word;">
@@ -44,21 +94,30 @@ const works = getThemeWorks(entry);
               </li>
             ))}
           </ul>
-      )}
-    </div>
-    <div class="work_content">
-      {entry.featuredImage && <img class="img" src={entry.featuredImage} alt={titleEn || "theme"} />}
-      <div class="ttlbox">
-        <div class="ttl" data-lang="en">{titleEn}</div>
-        <div class="ttl" data-lang="zh">{titleZh}</div>
-        <div class="inf" data-lang="en">{introductionEh}<br /></div>
-        <div class="inf" data-lang="zh">{introductionZh}<br /></div>
+        )}
       </div>
 
-      <div data-lang="en" set:html={entry.languageHtml.en} />
-      <div data-lang="zh" set:html={entry.languageHtml.zh} />
-      
-    </div>  
-  </div>
+      <div class="work_content">
+        {data.featuredImage && (
+          <Image
+            class="img"
+            src={data.featuredImage}
+            alt={titleEn || "theme"}
+            widths={[800, 1200, 1800, 2200]}
+            format="webp"
+          />
+        )}
+
+        <div class="ttlbox">
+          <div class="ttl" data-lang="en">{titleEn}</div>
+          <div class="ttl" data-lang="zh">{titleZh}</div>
+          {introductionEn && <div class="inf" data-lang="en">{introductionEn}<br /></div>}
+          {introductionZh && <div class="inf" data-lang="zh">{introductionZh}<br /></div>}
+        </div>
+
+        <ContentBlocks blocks={blocksEn} lang="en" title={titleEn} />
+        <ContentBlocks blocks={blocksZh} lang="zh" title={titleZh} />
+      </div>
+    </div>
   </div>
 </Layout>

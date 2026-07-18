@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+
+const { blocks = [], lang, title = "" } = Astro.props;
+
+const defaultAllow =
+  "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+---
+
+<div data-lang={lang}>
+  {blocks.map((block) => (
+    block.type === "text" ? (
+      <div class="dscrptn">{block.content}</div>
+    ) : block.type === "image" ? (
+      <div class="box">
+        <Image
+          class="subimg"
+          src={block.src}
+          alt={block.alt || title || ""}
+          widths={[600, 1000, 1600, 2200]}
+          format="webp"
+          loading="lazy"
+          decoding="async"
+        />
+        {block.credit && <div class="photocredit">(photo by : {block.credit})</div>}
+      </div>
+    ) : block.type === "video" ? (
+      <iframe
+        title={block.title || title || "video"}
+        src={block.src}
+        frameborder="0"
+        allow={block.allow || defaultAllow}
+        allowfullscreen
+      ></iframe>
+    ) : null
+  ))}
+
+  <div class="box"></div>
+</div>

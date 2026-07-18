@@ -1,20 +1,72 @@
 ---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
 import "../styles/theme-card.css";
-import { getThemeWorks } from "../utils/themes.js";
 
 const { entry } = Astro.props;
 const data = entry.data;
-const works = getThemeWorks(entry);
+
+function getTitleText(title) {
+  if (!title) return "";
+  if (typeof title === "string") return title;
+  return title.en || title.zh || "";
+}
+
+function getEntryTitle(entry) {
+  return (
+    getTitleText(entry.data.title) ||
+    entry.data.title_en ||
+    entry.data.title_zh ||
+    entry.slug
+  );
+}
+
+function normalizeWork(work, artworks) {
+  const bySlug = new Map(artworks.map((entry) => [entry.slug, entry]));
+  const byTitle = new Map(artworks.map((entry) => [getEntryTitle(entry), entry]));
+
+  if (typeof work === "string") {
+    const artwork = byTitle.get(work);
+
+    return {
+      title: work,
+      href: artwork ? `/artworks/${artwork.slug}/` : "#"
+    };
+  }
+
+  const title = getTitleText(work.title);
+  const artwork = work.slug ? bySlug.get(work.slug) : byTitle.get(title);
+
+  return {
+    title: title || getEntryTitle(artwork) || "",
+    href: artwork ? `/artworks/${artwork.slug}/` : work.slug ? `/artworks/${work.slug}/` : "#"
+  };
+}
 
 const titleEn = data.title_en || data.title?.en || data.title || data.title_zh;
 const titleZh = data.title_zh || data.title?.zh || data.title || data.title_en;
 const introductionEn = data.introduction?.en || data.introduction_en || "";
 const introductionZh = data.introduction?.zh || data.introduction_zh || introductionEn;
+
+const href = `/themes/${entry.slug}/`;
+const featuredImage = data.featuredImage;
+
+const artworks = await getCollection("artworks");
+const works = (data.works || []).map((work) => normalizeWork(work, artworks));
 ---
+
 <div class="theme_card" id={`theme-${entry.slug}`}>
-  <a href={entry.href}>
-    {entry.featuredImage && (
-      <img class="theme_card_img" src={entry.featuredImage} alt={titleEn || "theme"} />
+  <a href={href}>
+    {featuredImage && (
+        <Image
+          class="theme_card_img"
+          src={featuredImage}
+          alt={titleEn || "theme"}
+          widths={[500, 900, 1400]}
+          format="webp"
+          loading="lazy"
+          decoding="async"
+        />
     )}
 
     <h2 class="theme_card_title" data-lang="en">{titleEn}</h2>
@@ -23,9 +75,14 @@ const introductionZh = data.introduction?.zh || data.introduction_zh || introduc
     {introductionEn && <p class="theme_card_introduction" data-lang="en">{introductionEn}</p>}
     {introductionZh && <p class="theme_card_introduction" data-lang="zh">{introductionZh}</p>}
   </a>
+
   {works.length > 0 && (
     <ul class="theme_card_works">
-      {works.map((work) => <li><a href={work.href}>{work.title}</a></li>)}
+      {works.map((work) => (
+        <li>
+          <a href={work.href}>{work.title}</a>
+        </li>
+      ))}
     </ul>
   )}
 </div>

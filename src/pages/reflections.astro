@@ -1,9 +1,30 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ArtworkCard from "../components/ArtworkCard.astro";
-import { getOrderedEntries } from "../utils/content.js";
+import { getCollection } from "astro:content";
 
-const entries = getOrderedEntries("reflections");
+const reflectionOrder = ["Origin"];
+
+function getTitleText(title) {
+  if (!title) return "";
+  if (typeof title === "string") return title;
+  return title.en || title.zh || "";
+}
+
+function sortByOrder(entries, order) {
+  const byTitle = new Map(entries.map((entry) => [getTitleText(entry.data.title), entry]));
+
+  const ordered = order
+    .map((title) => byTitle.get(title))
+    .filter(Boolean);
+
+  const seen = new Set(ordered.map((entry) => entry.slug));
+  const unordered = entries.filter((entry) => !seen.has(entry.slug));
+
+  return [...ordered, ...unordered];
+}
+
+const entries = sortByOrder(await getCollection("reflections"), reflectionOrder);
 ---
 
 <Layout title="chang hsin-yu 張欣語 reflections">
@@ -11,7 +32,7 @@ const entries = getOrderedEntries("reflections");
     <div style="width:100%;display:flex;justify-content:space-between;flex-wrap:wrap">
       {entries.map((entry) => (
         <div class="work">
-          <ArtworkCard entry={entry} />
+          <ArtworkCard entry={entry} category="reflections" />
         </div>
       ))}
     </div>

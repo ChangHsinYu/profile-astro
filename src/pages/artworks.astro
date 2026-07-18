@@ -2,11 +2,82 @@
 import Layout from "../layouts/Layout.astro";
 import ArtworkCard from "../components/ArtworkCard.astro";
 import ThemeCard from "../components/ThemeCard.astro";
-import { getOrderedEntries } from "../utils/content.js";
-import { getThemeEntries } from "../utils/themes.js";
+import { getCollection } from "astro:content";
 
-const entries = getOrderedEntries("artworks");
-const themes = getThemeEntries();
+const artworkOrder = [
+  "Listen to the Light - Keelung ver.",
+  "Sun Dairy",
+  "Inert Gas Resonance",
+  "Rainforest",
+  "Aftershocks in the Crevice",
+  "Myst(Box Version)",
+  "Microbial Ensemble",
+  "□○△",
+  "Void",
+  "Creature from Desolate Planet",
+  "Listen to the Light - routine",
+  "Chaotic City",
+  "Myst",
+  "Soul - Vinyl",
+  "Dive in Architecture",
+  "Vibration of Ink Fluid",
+  "Space Surfing",
+  "&#x611b (online version)",
+  "Tree Noise",
+  "Counter",
+  "Portal",
+  "Zebra's Dream",
+  "Listen to the Light",
+  "Soul",
+  "Cross",
+  "Pronunciation Exercise",
+  "&#x611b",
+  "Cyberfly",
+  "Feeding",
+  "Memory Noise",
+  "Sketch of Audio Visual",
+  "Couldn't Find"
+];
+
+const themeOrder = [
+  "Sonic Alchemy",
+  "Light as Signal",
+  "The System",
+  "Geometry",
+  "Audio Visual Animate",
+  "Wrong Sound"
+];
+
+function getTitleText(title) {
+  if (!title) return "";
+  if (typeof title === "string") return title;
+  return title.en || title.zh || "";
+}
+
+function getEntryTitle(entry) {
+  return (
+    getTitleText(entry.data.title) ||
+    entry.data.title_en ||
+    entry.data.title_zh ||
+    entry.slug
+  );
+}
+
+function sortByOrder(entries, order) {
+  const byTitle = new Map(entries.map((entry) => [getEntryTitle(entry), entry]));
+
+  const ordered = order
+    .map((title) => byTitle.get(title))
+    .filter(Boolean);
+
+  const seen = new Set(ordered.map((entry) => entry.slug));
+  const unordered = entries.filter((entry) => !seen.has(entry.slug));
+
+  return [...ordered, ...unordered];
+}
+
+const entries = sortByOrder(await getCollection("artworks"), artworkOrder);
+const themes = sortByOrder(await getCollection("themes"), themeOrder);
 
 const artworkcolumns = 5;
 const themecolumns = 3;
@@ -17,20 +88,20 @@ const themePlaceholderCount = (themecolumns - (themes.length % themecolumns)) % 
 <style>
   .work_catagery {
     letter-spacing: 0.05rem;
-    font-size:0.65rem;
-    width:100%;
-/*    height:50px;*/
-    text-align:left;
-    margin-top:50px;
+    font-size: 0.65rem;
+    width: 100%;
+    text-align: left;
+    margin-top: 50px;
   }
-  @media screen and (min-width:800px){
+
+  @media screen and (min-width: 800px) {
     .work_catagery {
       letter-spacing: 0.05rem;
-      font-size:0.8rem;
-      margin-top:0;
-      width:100%;
-      height:50px;
-      text-align:left;
+      font-size: 0.8rem;
+      margin-top: 0;
+      width: 100%;
+      height: 50px;
+      text-align: left;
     }
   }
 </style>
@@ -41,12 +112,14 @@ const themePlaceholderCount = (themecolumns - (themes.length % themecolumns)) % 
       <div>Themes and Evolution</div>
       <div style="width:100%;margin-top:10px;border-bottom: 1px solid #000;"></div>
     </div>
+
     <div style="width:100%;display:flex;justify-content:space-between;flex-wrap:wrap;margin-top:10px;">
       {themes.map((theme) => (
         <div class="theme">
           <ThemeCard entry={theme} />
         </div>
       ))}
+
       {Array.from({ length: themePlaceholderCount }).map(() => (
         <div class="theme" aria-hidden="true"></div>
       ))}
@@ -56,30 +129,17 @@ const themePlaceholderCount = (themecolumns - (themes.length % themecolumns)) % 
       <div>List of works (sort by years)</div>
       <div style="width:100%;margin-top:10px;border-bottom: 1px solid #000;"></div>
     </div>
+
     <div style="width:100%;display:flex;justify-content:space-between;flex-wrap:wrap;margin-top:10px;">
       {entries.map((entry) => (
         <div class="work">
           <ArtworkCard entry={entry} />
         </div>
       ))}
+
       {Array.from({ length: artworkPlaceholderCount }).map(() => (
         <div class="work" aria-hidden="true"></div>
       ))}
     </div>
   </div>
 </Layout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
