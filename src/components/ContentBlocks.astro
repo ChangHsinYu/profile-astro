@@ -1,16 +1,21 @@
 ---
 import { Image } from "astro:assets";
+import { marked } from "marked";
 
 const { blocks = [], lang, title = "" } = Astro.props;
 
 const defaultAllow =
   "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+
+function markdownToHtml(content = "") {
+  return marked.parse(content);
+}
 ---
 
-<div data-lang={lang}>
+<div class="content_blocks" data-lang={lang}>
   {blocks.map((block) => (
     block.type === "text" ? (
-      <div class="dscrptn">{block.content}</div>
+      <div class="dscrptn" set:html={markdownToHtml(block.content)} />
     ) : block.type === "image" ? (
       <div class="box">
         <Image

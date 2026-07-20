@@ -113,6 +113,15 @@ const works = (data.works || []).map((work) => normalizeWork(work, artworks));
           <div class="ttl" data-lang="zh">{titleZh}</div>
           {introductionEn && <div class="inf" data-lang="en">{introductionEn}<br /></div>}
           {introductionZh && <div class="inf" data-lang="zh">{introductionZh}<br /></div>}
+          {works.length > 0 && (
+          <ul class="theme_card_links">
+            {works.map((work) => (
+              <li style="text-align: left; text-align-last: left; overflow-wrap: break-word;">
+                <a href={work.href}>{work.title}</a>
+              </li>
+            ))}
+          </ul>
+        )}
         </div>
 
         <ContentBlocks blocks={blocksEn} lang="en" title={titleEn} />

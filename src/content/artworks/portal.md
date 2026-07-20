@@ -31,6 +31,24 @@ blocks:
     - type: image
       src: ../../assets/artworks/portal/img6.jpg
       credit: CHANG HSIN YU
+    - type: image
+      src: ../../assets/artworks/portal/img7.jpg
+      credit: CHANG HSIN YU
+    - type: image
+      src: ../../assets/artworks/portal/img8.jpg
+      credit: CHANG HSIN YU
+    - type: image
+      src: ../../assets/artworks/portal/img9.jpg
+      credit: CHANG HSIN YU
+    - type: image
+      src: ../../assets/artworks/portal/img10.jpg
+      credit: CHANG HSIN YU
+    - type: image
+      src: ../../assets/artworks/portal/img11.jpg
+      credit: CHANG HSIN YU
+    - type: image
+      src: ../../assets/artworks/portal/img12.jpg
+      credit: CHANG HSIN YU
   zh:
     - type: text
       content: 這件作品拆除了一些廢棄工廠中還能夠運作的燈管及電子元件，並在一個特殊的過道空間重組成穿梭於空間中的裝置，安放的位置正好呼應此過道作為四個不同空間交集處的特殊身體感
@@ -51,5 +69,23 @@ blocks:
       credit: CHANG HSIN YU
     - type: image
       src: ../../assets/artworks/portal/img6.jpg
+      credit: CHANG HSIN YU
+    - type: image
+      src: ../../assets/artworks/portal/img7.jpg
+      credit: CHANG HSIN YU
+    - type: image
+      src: ../../assets/artworks/portal/img8.jpg
+      credit: CHANG HSIN YU
+    - type: image
+      src: ../../assets/artworks/portal/img9.jpg
+      credit: CHANG HSIN YU
+    - type: image
+      src: ../../assets/artworks/portal/img10.jpg
+      credit: CHANG HSIN YU
+    - type: image
+      src: ../../assets/artworks/portal/img11.jpg
+      credit: CHANG HSIN YU
+    - type: image
+      src: ../../assets/artworks/portal/img12.jpg
       credit: CHANG HSIN YU
 ---

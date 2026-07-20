@@ -17,6 +17,5 @@
     "p5": "^1.11.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
-  },
-  "devDependencies": {}
+  }
 }

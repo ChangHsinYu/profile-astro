@@ -54,6 +54,13 @@
   text-align:justify;
   hyphens: auto;
   line-height:1.2rem;
+  white-space: pre-line;
+}
+.dscrptn strong {
+  font-weight: 600;
+}
+.dscrptn p {
+  margin:0;
 }
 .photocredit{
   margin-top: 3px;
@@ -146,6 +153,13 @@ iframe{
     letter-spacing: 0.03rem;
     text-align:justify;
     line-height:1.65rem;
+    white-space: pre-line;
+  }
+  .dscrptn strong {
+    font-weight: 600;
+  }
+  .dscrptn p {
+    margin:0;
   }
   .photocredit{
     margin-top: 2px;
