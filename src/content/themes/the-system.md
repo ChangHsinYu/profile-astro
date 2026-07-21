@@ -18,15 +18,15 @@ works:
   - title: Feeding
     slug: feeding
 introduction:
-  en: I construct autonomous systems, rather than pre-determining the final form of the work, to enable non-human systems such as microorganisms, plants, electromagnetic fields, and sound feedback to jointly generate sound. In the work, sound is a way of observing the operation of the system, rather than a result of creation.
-  zh: 透過建構自主系統，而非預設作品的最終形式，使微生物、植物、電磁場、聲音回授等非人系統共同生成聲音。聲音在作品中是一種觀察系統運作的方式，而非創作的結果。
+  en: When we try to understand how something seemingly impossible can happen, what we ultimately encounter is often not magic itself, but the physical, biological, or technological mechanisms hidden behind the phenomenon. Conversely, could these very real physical phenomena and generative mechanisms themselves become a means of creating magic?
+  zh: 當我們試圖理解一件看似不可思議的事情如何發生時，最終所接近的往往不是魔法本身，而是隱藏在現象背後的物理、生物或技術機制。相反，那些真實存在的物理現象與生成機制，是否也可能創造魔法？
 blocks:
   en:
     - type: text
       content: |-
-        My practice focuses on autonomous systems formed through invisible signals, generative mechanisms, and self-regulating processes. Rather than constructing fixed sonic structures, I design environmental conditions in which non-human systems—such as microorganisms, plants, electromagnetic fields, and acoustic feedback—interact with their surroundings, generating sonic states that cannot be precisely predicted through continuous feedback loops and signal fluctuations. The emphasis of this body of work is not on directly controlling the outcome, but on constructing systems capable of operating autonomously and continuously generating change, with sound serving as one way of observing these systems.
+        I am interested in semi-autonomous systems formed through invisible signals, generative mechanisms, or processes of self-regulation. Rather than establishing fixed sonic structures, my works create different environmental conditions in which non-human systems—such as microorganisms, plants, electromagnetic fields, and acoustic feedback—interact with their surroundings, giving rise to sonic phenomena that cannot be precisely predicted through continuous feedback loops or fluctuating signals. The focus of this body of work is not on directly controlling outcomes, but on constructing systems capable of operating autonomously and continuously generating change, allowing sound to emerge as a phenomenon produced through the ongoing operation of the system.
         
-        This body of work originated from my interest in the mechanism of acoustic feedback between microphones and loudspeakers -- sound emitted by a loudspeaker is received again by a microphone, causing the system’s output to become the input for its next operation and to continuously change through repeated cycles. One aspect of this phenomenon that fascinates me is that it does not require a deliberately introduced external input to initiate the process. Subtle vibrations in the air, or even the inherent noise of an electrical circuit, can be amplified through continuous feedback and eventually develop into powerful sounds. This led me to consider whether artistic practice could begin not with the direct creation of content, but by bringing phenomena that already exist and continuously occur into relationships constructed through the work—shifting the act of creation from “creating the work” toward “constructing conditions.” The work, therefore, is no longer a predetermined outcome, but a system that continues to operate and generate different states within a given set of conditions.
+        This body of work originated from my interest in acoustic feedback between microphones and loudspeakers: sound emitted by a loudspeaker is received again by a microphone, causing the system’s output to become the input of its next operation and to continuously transform through repetition. One of the most compelling aspects of this phenomenon is that it does not require any deliberate external input at the outset. The slightest vibration in the air, or even the background noise of the circuitry itself, can be amplified through continuous feedback and eventually develop into an immense sound. This led me to consider whether artistic practice could begin not with the direct creation of content, but by incorporating phenomena that already exist and are continuously occurring into relationships constructed by the work—shifting the act of making from “creating an artwork” toward “constructing conditions.” The work is therefore no longer a predetermined result, but a system that continues to operate under specific conditions and generates different states over time.
         
         **Sound as Both a Condition and an Outcome of the Syste**
           *Feeding (2020)* consists of multiple acoustic feedback units, each comprising a movable microphone and loudspeaker, together with a sensor that detects sound intensity. When the sound level becomes too low, the microphone descends and moves closer to the loudspeaker, increasing the feedback. When the sound becomes too loud, the microphone rises and moves farther away, reducing the feedback. The intensity of the sound therefore alters the very conditions through which the sound is produced, keeping the system in a continuous process of seeking equilibrium.
@@ -43,9 +43,9 @@ blocks:
       credit: 均勻製作
     - type: text
       content: |-
-        In these works, sound is not simply a one-way output produced as the result of a system’s operation; it simultaneously becomes a condition that influences the system’s subsequent states. The sounds generated by the system continuously re-enter its operation, changing with each cycle through their interactions with the apparatus, space, and environment. Sound is therefore both the result of the system’s current state and a factor that drives its continued transformation.
-        
-        During the experimental development of Feeding, I introduced variable pauses after the microphones were raised in order to prevent multiple units from falling into overly fixed patterns. This degree of randomness disrupted mechanical repetition, allowing the system to generate changes that were difficult to predict while still retaining an internal logic. In Cross, the audience’s presence intervenes in the system by altering the acoustic reflections of the space, while Tree Noise incorporates more complex external environmental factors. As my practice developed, I began to consider more closely the different sources of uncertainty within these systems. They may arise from deliberately introduced random mechanisms, from variable results in processes of signal transformation, from fluctuations in biological metabolism, from noise within electromagnetic signals, or from disturbances caused by the environment and the audience. These uncertain factors enter the systems in different ways, allowing simple rules and conditions to generate complex outcomes. Different forms of uncertainty thus become important conditions through which the systems continue to produce change.
+        In these works, sound is not simply a one-way output produced after the system operates; it also becomes a condition that influences the system’s next state. The sounds generated by the system repeatedly re-enter its own operation and are altered in each cycle by the devices, the space, and the surrounding environment. Sound is therefore both the result of the system’s current state and a factor that drives its continuous transformation.
+
+        During the experimental phase of *Feeding (2020)*, in order to prevent multiple devices from falling into overly fixed patterns, I introduced variable pauses after the microphones were raised. This moderate degree of randomness disrupted mechanical repetition and allowed the system to produce changes that were difficult to predict while still retaining an internal logic. In *Cross(2021)* , uncertainty arises from differences between loudspeakers with different specifications, as well as from the ways viewers disturb the existing patterns of acoustic reflection within the space. *Tree Noise(2022)* , meanwhile, is subject to more complex environmental factors. As my practice developed, I began to think more deliberately about how sources of uncertainty could be selected or introduced into these systems. They may arise from intentionally programmed random processes, from unstable outcomes produced during signal conversion, from fluctuations in biological metabolism, from noise within electromagnetic signals, or from disturbances caused by the environment and by viewers. These uncertain factors enter the systems in different ways, allowing simple rules and conditions to generate complex outcomes and becoming essential conditions for the systems to continue changing.
         
         **Uncertainty as a Condition of the System:**
           *&#x611b (2020)* I use UTF-8 encoding to convert continuously changing posts and comments from online forums into binary signals. The resulting zeros and ones control the electrical switching of loudspeakers, producing a sequence of sounds. Although the rules of encoding remain fixed, the online texts entering the system continuously change, causing each set of textual information to generate a different binary sequence and, consequently, a sonic outcome that cannot be predetermined.
@@ -60,15 +60,20 @@ blocks:
     - type: image
       src: ../../assets/themes/the-system/img5.jpg
       credit: 張欣語
+    - type: text
+      content: |-
+        One of the reasons I create these continuously changing generative systems is that the process feels to me like developing a form of magic. Here, magic does not refer to the supernatural, but to phenomena that have not yet been fully understood. The microbial activity, information decoding, electromagnetic signals, acoustic feedback, and environmental changes involved in these works are often invisible. Viewers first encounter the effects they produce, and only through observation begin to perceive the possible rules operating behind them. When we try to understand how something seemingly impossible can happen, what we ultimately approach is often not magic itself, but the physical, biological, or technological mechanisms concealed behind the phenomenon. Conversely, could these very real physical phenomena and generative mechanisms themselves create magic? 
+        
+        At the same time, I often feel impatient with the idea of having my time controlled by an artwork. I do not want viewers to be required to remain with a work for a predetermined duration. I prefer works that continue to exist while the duration of viewing belongs to the viewer. Real-time generative mechanisms blur the beginning and end of the work: when viewers enter the space, the system is already operating, and after they leave, it continues to unfold. Each person can decide when to enter, how long to stay, and when to leave. Viewing does not require experiencing a duration prescribed in advance by the work, but instead becomes the act of taking one’s own fragment from an ongoing process. Uncertainty is therefore not only a condition that allows the system to generate change; it also allows the work to retain the possibility of what has not yet happened. Viewers may leave at any moment, but they may also choose to remain because they cannot predict what will happen next. Just as I do not directly determine the final outcomes generated by the system, I do not attempt to determine how long viewing should last. What I hope to construct are the conditions through which both change and observation can continue to unfold.
     - type: image
       src: ../../assets/themes/the-system/img6.jpg
       credit: 張欣語
   zh:
     - type: text
       content: |-
-        我關注由不可見訊號、衍生機制或自我調節所形成的自主系統，作品並不會建立固定的聲音結構，而是透過設計不同的環境條件，使微生物、植物、電磁場、聲音回授等非人系統與環境互動，在持續的回饋循環或訊號波動中衍生出無法精準預期的聲音狀態。此系列作品重點不在於直接控制結果，而是在於建構一個能夠自主運作並持續生成變化的系統，以聲音作為這套系統下的一種觀察方式。
+        我關注由不可見訊號、衍生機制或自我調節所形成的自主系統，作品並不會建立固定的聲音結構，而是透過設計不同的環境條件，使微生物、植物、電磁場、聲音回授等非人系統與環境互動，在持續的回饋循環或訊號波動中衍生出無法精準預期的聲音狀態。此系列作品重點不在於直接控制結果，而是在於建構一個能夠自主運作並持續生成變化的系統，使聲音成為這套系統持續運作中所湧現的現象。
         
-        這系列的起源來自我對麥克風與喇叭之間聲音回授（feedback）機制的興趣：喇叭輸出的聲音再次被麥克風接收，系統的輸出重新成為下一次運作的輸入，並在持續循環中不斷改變。這樣的現象其中一項迷人之處，在於它的起點不需要刻意加入其他外部輸入，任何空氣中微弱的振動，甚至電路本身的底噪，都可能在不斷回授的過程中被放大，最終衍生出巨大的聲響。自此我開始思考，創作是否可以不再以直接創造內容為起點，而是將原本已經存在並持續發生的現象納入作品所建構的關係之中，將創作從「創造作品」轉向「建構條件」。作品因此不再是一個被預先決定的結果，而是一個在既定條件下持續運作並生成不同狀態的系統。
+        這系列的起源來自我對麥克風與喇叭之間聲音回授（feedback）機制的興趣：喇叭輸出的聲音再次被麥克風接收，系統的輸出重新成為下一次運作的輸入，並在持續循環中不斷改變。這個現象迷人的地方之一，在於它的起點不需要刻意加入其他外部輸入，任何空氣中微弱的振動，甚至電路本身的底噪，都可能在不斷回授的過程中被放大，最終衍生出巨大的聲響。這讓我開始思考，創作是否可以不以直接創造內容為起點，而是將原本已經存在並持續發生的現象納入作品所建構的關係之中，將創作從「創造作品」轉向「建構條件」。作品因此不再是一個被預先決定的結果，而是一個在既定條件下持續運作並生成不同狀態的系統。
         
         **聲音作為系統的條件與結果：**
           *Feeding (2020)* 由數個聲音回授單元組成，每個單元包含一組可移動的麥克風與喇叭，以及偵測聲音強度的感測器。當聲音過小時，麥克風會下降並靠近喇叭，使回授增強；當聲音過大時，麥克風則上升並遠離喇叭，使回授減弱。聲音的強度因此反過來改變產生聲音的條件，使系統持續處於尋找平衡的狀態。
@@ -85,7 +90,7 @@ blocks:
       credit: 均勻製作
     - type: text
       content: |-
-        在這幾件作品中，聲音並非系統運作後所產生的單向輸出，而同時作為影響系統下一個狀態的條件。系統所產生的聲音不斷重新進入自身的運作中，並在每一次循環中受到裝置、空間、與環境的影響而發生變化。聲音因此既是系統當下狀態的結果，也是推動其持續變化的因素。在「Feeding」這件作品的實驗階段，為了避免多座裝置出現過於固定的模式，我在將麥克風往上拉之後設定了不固定的暫停時間，適度的隨機性打破了機械性的重複，使系統產生難以預測但仍具有內在規律的變化 ; 在「Cross」中是觀眾介入系統擾動了原本空間中的聲音反射 ; 而「Tree Noise」則有更複雜的外在環境因素。隨著創作的發展，我開始進一步思考這些系統中的不確定性來源，它們有時來自人為設定的隨機機制，有時來自訊號轉換過程中的不固定結果，也可能源自生物代謝的波動、電磁訊號中的雜訊，或環境與觀眾所帶來的干擾。這些不確定因素以不同方式進入系統，使簡單的規則與條件也能產生複雜的結果，不同來源的不確定性也成為系統持續產生變化的重要條件。
+        在這幾件作品中，聲音並非系統運作後所產生的單向輸出，而同時作為影響系統下一個狀態的條件。系統所產生的聲音不斷重新進入自身的運作中，並在每一次循環中受到裝置、空間、與環境的影響而發生變化。聲音因此既是系統當下狀態的結果，也是推動其持續變化的因素。在 *Feeding (2020)* 的實驗階段，為了避免多座裝置出現過於固定的模式，我在將麥克風往上拉之後設定了不固定的暫停時間，適度的隨機性打破了機械性的重複，使系統產生難以預測但仍具有內在規律的變化，在 *Cross (2021)* 中的不確定性則來自不同規格喇叭之間的差異，以及觀眾介入對空間聲音反射所造成的擾動 ; 而 *Tree Noise (2022)* 則受到更複雜的外在環境因素影響。隨著創作的發展，我開始進一步思考如何選擇或引入這些系統中的不確定性來源，它們有時來自人為設定的隨機機制，有時來自訊號轉換過程中的不固定結果，也可能源自生物代謝的波動、電磁訊號中的雜訊，或環境與觀眾所帶來的干擾。這些不確定因素以不同方式進入系統，使簡單的規則與條件也能產生複雜的結果，不同來源的不確定性也成為系統持續產生變化的重要條件。
         
         **不確定性作為系統的條件：**
           *&#x611b (2020)* 將網路論壇中持續產生的文章與留言透過 UTF-8 編碼轉換為二進位訊號，並以 0 與 1 控制喇叭的通電與斷電，形成一連串的聲響。編碼的規則本身是固定的，但進入系統的網路文字持續變動，使每一組不同的文字內容產生不同的二進位序列，並進一步形成無法被預先決定的聲音結果。
@@ -100,6 +105,11 @@ blocks:
     - type: image
       src: ../../assets/themes/the-system/img5.jpg
       credit: 張欣語
+    - type: text
+      content: |-
+        我創作這些持續變化的衍生系統，其中一個原因是我覺得這個過程很像在研發一種魔法。這裡的魔法並非指向超自然，而是指一種尚未被完全理解的現象。作品中的微生物活動、資訊解碼、電磁訊號、聲音回授與環境變化通常無法被直接看見，觀眾首先遭遇的是它們所引發的結果，再於觀看的過程中逐漸察覺背後可能存在的規則。當我們試圖理解一件看似不可思議的事情如何發生時，最終所接近的往往不是魔法本身，而是隱藏在現象背後的物理、生物或技術機制。相反，那些真實存在的物理現象與生成機制，是否也可能創造魔法？
+
+        另一方面，我時常對「被作品控制的時間」感到不耐，我不希望透過預先設定的時長要求觀眾持續觀看，我更喜歡作品持續存在，而觀看的時間屬於觀眾。即時運作的生成機制使作品的開始與結束變得模糊，當觀眾進入空間時系統早已開始運作，當觀眾離開之後它仍然持續發生。每個人可以自行決定進入、停留與離開的時刻，觀看不必經歷一段由作品預先規定的時間，而是從一個持續發展的過程中截取屬於自己的片段。而「不確定性」不只是系統生成變化的條件，也使作品持續保有尚未發生的可能，觀眾可以隨時離開，也可能因為無法預期下一刻將發生什麼而選擇留下。如同我不直接決定系統最終生成的結果，我也不試圖決定觀看應該停留多久；我希望建構的是使變化與觀看得以持續發生的條件。
     - type: image
       src: ../../assets/themes/the-system/img6.jpg
       credit: 張欣語
