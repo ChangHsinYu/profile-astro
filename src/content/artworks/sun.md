@@ -1,5 +1,5 @@
 ---
-title: Sun Dairy
+title: Sun Diary
 date: "2025"
 material:
   - solar magnetic field data
@@ -15,7 +15,7 @@ blocks:
   en:
     - type: text
       content: |-
-        Sun Dairy uses publicly available solar wind magnetic field data from the National Oceanic and
+        Sun Diary uses publicly available solar wind magnetic field data from the National Oceanic and
         Atmospheric Administration (NOAA). The data are linearly interpolated and compressed into
         frequencies audible to the human ear, then recorded onto cassette tapes, transforming the Sun’s
         magnetic forces into patterns of magnetic powder on tape. Played back through a subwoofer, the
@@ -46,7 +46,7 @@ blocks:
   zh:
     - type: text
       content: |-
-        Sun Dairy uses publicly available solar wind magnetic field data from the National Oceanic and
+        Sun Diary uses publicly available solar wind magnetic field data from the National Oceanic and
         Atmospheric Administration (NOAA). The data are linearly interpolated and compressed into
         frequencies audible to the human ear, then recorded onto cassette tapes, transforming the Sun’s
         magnetic forces into patterns of magnetic powder on tape. Played back through a subwoofer, the
