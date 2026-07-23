@@ -1,7 +1,7 @@
 ---
 posttype: work
 title: Cyberfly
-date: "2020"
+date: "2021"
 material:
   - speaker
   - microphone
