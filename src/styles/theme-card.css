@@ -87,5 +87,8 @@
   letter-spacing:0.04rem;
   line-height:1.4rem;
   margin:0;
-}
+  }
+  .theme_card_links li{
+  color:#888888;
+  }
 }
