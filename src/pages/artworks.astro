@@ -45,7 +45,7 @@ const themeOrder = [
   "The System",
   "Geometry",
   "Audio Visual Animate",
-  "Wrong Sound"
+  "Spatial Intervention"
 ];
 
 function getTitleText(title) {
@@ -76,8 +76,16 @@ function sortByOrder(entries, order) {
   return [...ordered, ...unordered];
 }
 
+function pickByOrder(entries, order) {
+  const byTitle = new Map(entries.map((entry) => [getEntryTitle(entry), entry]));
+
+  return order
+    .map((title) => byTitle.get(title))
+    .filter(Boolean);
+}
+
 const entries = sortByOrder(await getCollection("artworks"), artworkOrder);
-const themes = sortByOrder(await getCollection("themes"), themeOrder);
+const themes = pickByOrder(await getCollection("themes"), themeOrder);
 
 const artworkcolumns = 5;
 const themecolumns = 3;
@@ -109,7 +117,7 @@ const themePlaceholderCount = (themecolumns - (themes.length % themecolumns)) % 
 <Layout title="chang hsin-yu 張欣語 works">
   <div class="work_main">
     <div class="work_catagery">
-      <div>Themes and Evolution</div>
+      <div>Theme, Evolution or Essay</div>
       <div style="width:100%;margin-top:10px;border-bottom: 1px solid #000;"></div>
     </div>
 

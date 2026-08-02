@@ -7,10 +7,12 @@ works:
     slug: portal
   - title: Stairway to Nothing
     slug: stair
-  - title: Cross
-    slug: cross
   - title: Sparks
     slug: sparks
+  - title: Aftershocks in the Crevice
+    slug: crevice
+  - title: Listen to the Light - Keelung ver.
+    slug: lightkeelung
 blocks:
   en:
     - type: image
@@ -34,6 +36,18 @@ blocks:
     - type: image
       src: ../../assets/themes/spatial-intervention/img5.jpg
       credit: 張欣語
+    - type: image
+      src: ../../assets/themes/spatial-intervention/img7.jpg
+      credit: 張欣語
+    - type: image
+      src: ../../assets/themes/spatial-intervention/img8.jpg
+      credit: 張欣語
+    - type: image
+      src: ../../assets/themes/spatial-intervention/img9.jpg
+      credit: 張欣語
+    - type: image
+      src: ../../assets/themes/spatial-intervention/img10.jpg
+      credit: 張欣語
   zh:
     - type: image
       src: ../../assets/themes/spatial-intervention/img6.jpg
@@ -55,5 +69,17 @@ blocks:
       credit: 張欣語
     - type: image
       src: ../../assets/themes/spatial-intervention/img5.jpg
+      credit: 張欣語
+    - type: image
+      src: ../../assets/themes/spatial-intervention/img7.jpg
+      credit: 張欣語
+    - type: image
+      src: ../../assets/themes/spatial-intervention/img8.jpg
+      credit: 張欣語
+    - type: image
+      src: ../../assets/themes/spatial-intervention/img9.jpg
+      credit: 張欣語
+    - type: image
+      src: ../../assets/themes/spatial-intervention/img10.jpg
       credit: 張欣語
 ---
