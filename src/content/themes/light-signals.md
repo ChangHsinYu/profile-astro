@@ -14,8 +14,8 @@ works:
   - title: Listen to the Light
     slug: light
 introduction:
-  en: Perhaps secrets are never hidden in the darkness, but in the light that illuminates the world. The same light may appear differently to different forms of life.
-  zh: 或許秘密從來不隱藏於黑暗，而是存在於照亮事物的光之中。同一道光在不同存在之間也許也有不同的顯現與解讀。
+  en: Secrets may be hidden in darkness, but they may also exist within the light that illuminates things. The same light may reveal itself differently and be interpreted in different ways by different beings.
+  zh: 秘密可能隱藏於黑暗，也可能存在於照亮事物的光之中。同一道光在不同存在之間也許也有不同的顯現與解讀。
 blocks:
   en:
     - type: text

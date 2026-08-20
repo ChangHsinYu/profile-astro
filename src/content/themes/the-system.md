@@ -20,8 +20,8 @@ works:
   - title: Feeding
     slug: feeding
 introduction:
-  en: When we try to understand how something seemingly impossible can happen, what we ultimately encounter is often not magic itself, but the physical, biological, or technological mechanisms hidden behind the phenomenon. Conversely, could these very real physical phenomena and generative mechanisms themselves become a means of creating magic?
-  zh: 當我們試圖理解一件看似不可思議的事情如何發生時，最終所接近的往往不是魔法本身，而是隱藏在現象背後的物理、生物或技術機制。相反，那些真實存在的物理現象與生成機制，是否也可能創造魔法？
+  en: When we try to understand how something seemingly impossible happens, what we ultimately encounter, beyond magic itself, are often the physical, biological, or technological mechanisms hidden behind it. But could these very real physical phenomena and generative mechanisms also create magic?
+  zh: 當我們試圖理解一件看似不可思議的事情如何發生時，最終所接近的除了魔法本身，往往還有隱藏在其背後的物理、生物或技術機制。而那些真實存在的物理現象與生成機制，是否也可能創造魔法？
 blocks:
   en:
     - type: text
@@ -62,10 +62,10 @@ blocks:
       credit: 台北數位藝術中心
     - type: text
       content: |-
-        From Luigi Russolo’s incorporation of industrial and urban noise into musical vocabulary, to Steve Reich’s use of a swinging microphone to allow acoustic feedback to unfold on its own, and Alvin Lucier’s explorations of the relationships among sound, space, and resonance...... noise, feedback, and spatial acoustics all have art-historical lineages far longer than my own practice. As I developed these works, Adam Basanta became one of my more direct contemporary references. By moving microphones, altering the distance between microphones and loudspeakers, or making use of the acoustic characteristics of a space, he turns acoustic feedback into a mechanism for revealing relationships among devices, space, and listening. Looking back at my own works, I had previously tried to establish differences through the formal design of the devices, more complex operational logics, and connections between the works and personal experience. However, if these works are still understood primarily as explorations of noise and spatial acoustics, such differences do not seem sufficient to constitute a substantial theoretical distinction.
+        From Luigi Russolo’s incorporation of industrial and urban noise into musical vocabulary, to Steve Reich’s use of a swinging microphone to allow acoustic feedback to unfold on its own, and Alvin Lucier’s explorations of the relationships between sound, space, and resonance...... noise, feedback, and spatial acoustics all have art-historical lineages that long precede my own practice. As I developed these works, Adam Basanta became one of my more direct contemporary references. By moving microphones, changing the distance between microphones and loudspeakers, or working with the acoustic properties of a space, he uses acoustic feedback as a mechanism for revealing the relationships between devices, space, and listening. Looking back at my own works, I had tried to establish differences through the formal design of the installations, more complex operational logics, and connections between the works and personal experience. However, if these works are understood solely as explorations of noise and spatial acoustics, such differences do not seem sufficient to constitute a substantial theoretical distinction.
 
         **Uncertainty**
-        This gradually led me away from works in which loudspeaker systems served as the primary mechanism, and I began to regard these earlier experiments as an entry point into a broader field of research. My concern was no longer feedback or electrical transients themselves, but rather how uncertainties from different sources participate in the operation of a system. In the works described above, uncertainty was already present in different forms: *Feeding* breaks mechanical repetition through irregular pause durations, while interactions among multiple units lead to unstable and unpredictable states; *Cross* is disturbed by the frequency responses of different loudspeakers, spatial reflections, and interventions by the audience; the unbalanced mechanical structure in *Cyberfly* produces irregular twisting movements; *Tree Noise* incorporates the complexity of the external environment into its loop; and in *&#x611b* , continuously changing online text prevents the binary sequence entering the system from being predetermined.
+        This gradually led me away from works centered on loudspeaker systems and toward considering the questions shared across these experiments from a broader perspective. One thread that began to emerge was how uncertainty from different sources participates in the operation of a system. In the works described above, uncertainty was in fact already present in different forms: *Feeding* breaks mechanical repetition through irregular pause durations, while interactions among multiple units lead to unstable and unpredictable states; *Cross* is disturbed by the frequency responses of different loudspeakers, spatial reflections, and interventions by the audience; the unbalanced mechanical structure in *Cyberfly* produces irregular twisting movements; *Tree Noise* incorporates the complexity of the external environment into its loop; and in *&#x611b* , continuously changing online text prevents the binary sequence entering the system from being predetermined.
 
         Although all of these works developed from system noise, looking back, *&#x611b* actually marked an important shift in my practice. The Feedback series mainly experimented with how different uncertain factors act upon the process of sonic change, whereas *&#x611b* extended this question outward toward the choice of the source that drives the system. Depending on the rules through which they operate, the uncertain factors selected in a work can exert different degrees of control over the outcome and may act on different levels of the work. These relationships, in turn, determine how the source manifests itself within a particular work. From this point onward, I gradually shifted my attention toward how different system configurations determine which aspects are controlled by the artist and which are jointly formed by the environment, materials, and biological processes.
 
@@ -83,19 +83,21 @@ blocks:
       credit: 張欣語
     - type: text
       content: |-
-        In these works, I determine the basic structure of the system, the sensing methods, the conditions under which signals enter the system, and which sonic parameters they are ultimately able to affect. Once these rules have been established, however, when signals appear, how they fluctuate, and what results the system produces at any given moment are left to the system to develop on its own. Artificially defined random mechanisms, such as random functions in software, can have their ranges specified in advance and therefore impose a certain degree of constraint on the outcome. By contrast, variations produced by mechanical structures, space, environment, or biological activity only emerge through actual operation and contact with the material environment, and external uncertainty may at times also become entangled with random functions within the system. The controllable and the uncontrollable therefore coexist at different levels of the system and influence the outcome to different degrees, rather than existing as two mutually exclusive states. Introducing uncertainty does not mean that a work has genuinely escaped control, nor does it imply the withdrawal of the author. What changes is where control is situated and to what extent different factors are able to participate in the development of the work. This also raises the question of how far we can claim that the sounds of a work are determined by the uncertainty of its source.
+        In these works, I determine the basic structure of the system, the sensing methods, the conditions under which signals enter the system, and which sonic parameters they can ultimately affect. Once these rules have been established, when the signals appear, how they fluctuate, and what results the system produces at a given moment are left to develop through the system’s own operation. Artificially defined random mechanisms, such as random functions in software, can have their ranges specified in advance and therefore impose a certain degree of constraint on the outcome. Variations produced by mechanical structures, space, the environment, or biological activity, however, only emerge through actual operation and contact with the material environment. External uncertainties may also become entangled with random functions within the system. The controllable and uncontrollable therefore coexist at different levels of the work and influence the outcome to different degrees. Introducing uncertainty does not mean that the work has escaped control, nor does it imply the withdrawal of the author. What changes is where control is situated and the extent to which different factors can participate in the development of the work. I have shifted from directly arranging sonic outcomes toward defining the conditions under which those outcomes can emerge.
 
-        In the acoustic feedback series, sound is not merely the result produced by the system; it also exposes how space, devices, and rules interact with one another, becoming a clue through which the site and its changes can be perceived. In later works, when factors such as microbial activity, electromagnetic signals, online information, and audience behavior encounter the mechanisms, sensing processes, transformations, and sound-producing methods established by the work, sound becomes an event that occurs through the encounter among these factors. Because these systems operate in real time, every act of listening is only a partial capture of their ongoing processes.
+        **Conclusion**
+        In the acoustic feedback series, sound is more than an outcome produced by the system. It also reveals how space, devices, and rules interact with one another, becoming a way of sensing the site and its changes. In later works, when factors such as microbial activity, electromagnetic signals, online information, and audience behavior encounter the mechanisms, sensing processes, transformations, and methods of sound production established by the work, sound emerges as an event produced through these encounters. Because these systems operate in real time, each act of listening captures only a partial moment of their ongoing processes.
 
         **Beyond the Rules**
-        At this stage, my works still operate primarily within rules established in advance. Although uncertain factors affect the sound and the state of the system, they are not yet able to intervene in the rules themselves. If the results produced by a work could further modify its own mode of operation, could long-term iteration give rise to more complex relationships of self-regulation? Several of the works discussed above also contain multiple units that influence one another through shared spaces, signals, and environments. This has led me to another question that I have not yet fully developed: if each system follows a simple set of rules and then becomes an input or operational condition for other systems, could their coupling produce collective behaviors that do not exist within any single system on its own? These two questions, which I am still considering, may become directions for the future development of my practice.
+        At this stage, my works still operate primarily within a fixed set of rules. Although uncertain factors affect the sound and the state of the system, they still enter the work only as inputs. I am interested in whether the source could develop more layered behaviors and relationships within the work. For example, if the results produced by a work could feed back into and modify its own mode of operation, could long-term iteration lead to more complex forms of self-regulation?
+        In addition, several of the works discussed above consist of multiple units that influence one another through shared spaces, signals, and environments. This has drawn my attention to another question that has yet to be fully explored: if each system follows a simple set of rules while also becoming an input or operational condition for other systems, could their coupling give rise to collective behaviors that no individual system possesses on its own? These two questions, which I am still exploring, may become directions for the future development of my practice.
     - type: image
       src: ../../assets/themes/the-system/img10.jpg
       credit: 張欣語
     - type: text
       content: |-
         **Magic**
-        Magic is usually composed of materials, spells, emotions, and effects. The preceding discussion has attempted to clarify how I configure control through systems, introduce uncertainty, and bring different materials and phenomena into relation. For me, however, “magic” may be the original motivation behind artistic creation: placing an imagination or emotion into the relationship between real media and materials, and technical mechanisms; establishing the spell-like rules through which they act upon one another; waiting for them to produce a sonic effect that cannot be fully predicted; and observing how those effects return to respond to the initial emotion and imagination.
+        Magic is often composed of materials, spells, emotions, and effects. The preceding discussion has attempted to clarify how I configure systems to distribute control, introduce uncertainty, and bring different materials and phenomena into relation. To me, these processes feel much like the study of magic: placing an imagined idea (emotion) into real media (materials) and technical mechanisms (spells), waiting for them to produce an unpredictable sound (effect), and observing how the resulting outcomes respond in turn to the initial motivation.
     - type: image
       src: ../../assets/themes/the-system/img6.jpg
       credit: 張欣語
@@ -138,12 +140,12 @@ blocks:
       credit: 台北數位藝術中心
     - type: text
       content: |-
-        從 Luigi Russolo 將工業與城市噪音納入音樂語彙，到 Steve Reich 讓聲音回授隨著麥克風擺動自行展開，以及 Alvin Lucier 對聲音、空間與共鳴關係的探索......。噪音、回授與空間聲學都有著比我的實踐更為悠久的藝術史脈絡。在我發展這些作品的過程中，Adam Basanta 則是更為直接的當代參照之一。他透過移動麥克風、改變麥克風與喇叭之間的距離，或利用空間的聲學特性，使聲音回授成為揭露裝置、空間與聆聽關係的機制。回頭檢視自己的作品，我過去曾試圖透過裝置造型、更複雜的運作邏輯以及作品與個人經驗之間的連結來建立差異。然而，如果仍將這些作品理解為對噪音與空間聲學的探索，這些差異似乎並不足以構成實質的理論區隔。
+        從 Luigi Russolo 將工業與城市噪音納入音樂語彙，到 Steve Reich 讓聲音回授隨著麥克風擺動自行展開，以及 Alvin Lucier 對聲音、空間與共鳴關係的探索......。噪音、回授與空間聲學都有著比我的實踐更為悠久的藝術史脈絡。在我發展這些作品的過程中，Adam Basanta 則是更為直接的當代參照之一。他透過移動麥克風、改變麥克風與喇叭之間的距離，或利用空間的聲學特性，使聲音回授成為揭露裝置、空間與聆聽關係的機制。回頭檢視自己的作品，我過去曾試圖透過裝置造型、更複雜的運作邏輯以及作品與個人經驗之間的連結來建立差異。然而，如果仍只將這些作品理解為對噪音與空間聲學的探索，這些差異似乎並不足以構成實質的理論區隔。
 
         **Uncertainty**
-        這使我逐漸離開以喇叭系統為主要機制的作品，並將前期實驗視為更廣泛研究的入口，我關注的不再只是回授或突波本身，而是不同來源的不確定性如何參與系統的運作。在上述作品中不確定性已經以不同形式存在： *Feeding* 透過不固定的暫停時間打破機械性的重複、多個單元的互相影響導致難以預期的不穩定狀態； *Cross* 受到不同規格喇叭的頻率響應、空間反射與觀眾介入的擾動； *Cyberfly* 中不平衡的機械結構產生不規則的扭動； *Tree Noise* 將複雜的外在環境納入循環； *&#x611b* 中即時變動的網路文字使進入系統的二進位序列無法被預先編排。
+        這使我逐漸離開以喇叭系統為主要機制的作品，並開始以更廣泛的角度思考其中共同存在的問題。其中一個浮現的線索是不同來源的不確定性如何參與系統的運作，在上述作品中，不確定性其實已經以不同形式存在： *Feeding* 透過不固定的暫停時間打破機械性的重複、多個單元的互相影響導致難以預期的不穩定狀態； *Cross* 受到不同規格喇叭的頻率響應、空間反射與觀眾介入的擾動； *Cyberfly* 中不平衡的機械結構產生不規則的扭動； *Tree Noise* 將複雜的外在環境納入循環； *&#x611b* 中即時變動的網路文字使進入系統的二進位序列無法被預先編排。
 
-        儘管都是以系統噪音作為發展基礎，回頭來看，*&#x611b* 其實構成了我的實踐中一次重要的轉向。Feedback系列主要實驗不同的不確定因素如何作用於聲音變化的過程，而 *&#x611b* 則更往外涉及了驅動系統的來源（source）的選擇。作品所選擇的不確定因素在不同的規則下對結果會有不同程度的控制，也可能作用於作品的不同層面，而這種關係也會使得source在特定作品中有特定的顯現。從這點延伸，我漸漸將思考的重點放在作品如何透過不同的系統配置決定哪些部分由藝術家控制，哪些部分由環境、物質與生物共同形成。
+        儘管都是以系統噪音作為發展基礎，回頭來看，*&#x611b* 其實構成了我的實踐中一次重要的轉向。Feedback系列中的不確定因素主要作用於聲音變化的過程，而 *&#x611b* 則更往外涉及了驅動系統的來源（source）的選擇。作品所選擇的不確定因素在不同的規則下對結果會有不同程度的控制，也可能作用於作品的不同層面，而這種關係也會使得source在特定作品中有特定的顯現。從這點延伸，我漸漸將思考的重點放在作品如何透過不同的系統配置決定哪些部分由藝術家控制，哪些部分由環境、物質與生物共同形成。
 
         *Soul (2022)* , *Soul-vinyl (2023)* 中，觀眾進入展場後觸發起電裝置產生靜電，電磁感測裝置接收空間中的電磁訊號，並將訊號傳送至演奏系統觸發不同的樂器。我設計系統可以使用的和弦與節奏規則，而音樂的發展則受到持續波動的電磁訊號影響。
         
@@ -159,19 +161,21 @@ blocks:
       credit: 張欣語
     - type: text
       content: |-
-        在這些作品中我決定了系統的基本結構、感測方式、訊號進入系統的條件和它最終能夠影響哪些聲音參數，在這些規則建立之後訊號何時出現、如何波動以及系統在特定時刻形成什麼結果則交由系統自行發展。人為設定的隨機機制，例如程式中的隨機函數，其範圍可以事先被界定並對結果有著一定程度的規範。而機械結構、空間、環境或生物活動所產生的變化則要在實際運作的過程與物質環境接觸才會發生，外部不確定性有時也會與系統內的隨機函數有所牽連。因此作品中的可控與不可控是同時存在於系統的不同層面並以不同程度共同影響結果，而不是兩種互相排斥的狀態。引入不確定性不能代表作品真正擺脫控制，更不意味著作者的退出。它改變的是控制被配置在什麼位置，以及不同因素能在多大程度上參與作品的發展，而我們又該如何宣稱作品的聲響有多大成分是被source的不確定性所決定？
-
+        在這些作品中我決定了系統的基本結構、感測方式、訊號進入系統的條件和它最終能夠影響哪些聲音參數，在這些規則建立之後訊號何時出現、如何波動以及系統在特定時刻形成什麼結果則交由系統自行發展。人為設定的隨機機制，例如程式中的隨機函數，其範圍可以事先被界定並對結果有著一定程度的規範。而機械結構、空間、環境或生物活動所產生的變化則要在實際運作的過程與物質環境接觸才會發生，外部不確定性有時也會與系統內的隨機函數有所牽連，作品中的可控與不可控是同時存在於系統的不同層面並以不同程度共同影響結果。因此引入不確定性並不能代表作品真正擺脫控制，更不意味著作者的退出，它改變的是控制被配置在什麼位置，以及不同因素能在多大程度上參與作品的發展。與其說我放棄了對結果的控制，不如說控制從對聲音結果的直接安排，轉移到了對其發生條件的設定。
+      
+        **Conclusion**
         在聲音回授系列創作中，聲音不只是系統產生的結果，它同時暴露了空間、裝置與規則彼此如何互動，成為了感受場域及其變化的線索。在後續作品中，當微生物活動、電磁訊號、網路資訊、觀眾的行為等不同因素遇上作品所建立的機制、感測、轉換及發聲方式，聲音也是這些因素彼此相遇時所發生的事件。由於這些系統都是即時運作，每一次聆聽都是對其運作過程的一次局部截取。
 
         **Beyond the Rules**
-        現階段的作品仍主要在預先建立的規則中運作，不確定因素雖然影響聲音與系統狀態，卻還無法對規則進行干涉。如果作品產生的結果能進一步反過來修改自身的運作方式，經過長時間的迭代是否可能形成更複雜的自我調節關係？另外上述有幾件作品存在多個單元透過共享的空間、訊號與環境互相影響，這也讓我注意到另一個尚未充分展開的問題：如果每個系統都遵循一套簡單的規則，並進一步成為其他系統的輸入或運作條件，彼此耦合之後是否可能形成任何單一系統都不具有的整體行為？這兩個目前仍在思考的問題可能成為後續實踐發展的方向。
+        現階段的作品仍主要在一套固定規則中運作，不確定因素雖然影響聲音與系統狀態，卻還只是作為一項輸入進入作品，我很好奇有沒有可能讓source在作品中建立更多層次的行為與關係，例如：如果作品產生的結果能進一步反過來修改自身的運作方式，經過長時間的迭代是否會形成更複雜的自我調節？
+        另外，上述有幾件作品存在多個單元透過共享的空間、訊號與環境互相影響，這也讓我注意到另一個尚未充分展開的問題：如果每個系統都遵循一套簡單的規則，並進一步成為其他系統的輸入或運作條件，彼此耦合之後是否可能形成任何單一系統都不具有的整體行為？這兩個目前仍在思考的問題可能成為後續實踐發展的方向。
     - type: image
       src: ../../assets/themes/the-system/img10.jpg
       credit: 張欣語
     - type: text
       content: |-
         **Magic**
-        魔法通常由材料、咒語、情感與效果所構成。前面的討論試圖釐清我是如何透過系統配置控制、引入不確定性，並使不同的物質與現象產生關係。而「魔法」對我而言或許正是創作的原始動機：將一個想像（情感）放進現實媒介（材料）與技術機制（咒語）之中，等待它產生某種無法預期的聲響（效果），觀察它們如何回過頭來回應最初的情感與想像。
+        魔法通常由材料、咒語、情感與效果所構成。前面的討論試圖釐清我是如何透過系統配置控制、引入不確定性，並使不同的物質與現象產生關係。而這些過程對我而言就很像是在研究魔法：將一個想像（情感）放進現實媒介（材料）與技術機制（咒語）之中，等待它產生某種無法預期的聲響（效果），觀察它們如何回過頭來回應最初的動機。
     - type: image
       src: ../../assets/themes/the-system/img6.jpg
       credit: 張欣語
