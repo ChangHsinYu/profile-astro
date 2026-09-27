@@ -22,7 +22,16 @@ const videoBlock = z.object({
   allow: z.string().optional(),
 });
 
-const stringList = z.union([z.string(), z.array(z.string())]).optional();
+const soundcloudBlock = z.object({
+  type: z.literal("soundcloud"),
+  src: z.string().url(),
+  title: z.string().optional(),
+  height: z.number().positive().optional(),
+});
+
+const stringList = z
+  .union([z.string(), z.array(z.string())])
+  .optional();
 
 const localizedString = z
   .union([
@@ -34,13 +43,21 @@ const localizedString = z
   ])
   .optional();
 
-const blocksSchema = ({ image }: { image: any }) =>
-  z
+const blocksSchema = ({ image }: { image: any }) => {
+  const block = z.union([
+    textBlock,
+    imageBlock({ image }),
+    videoBlock,
+    soundcloudBlock,
+  ]);
+
+  return z
     .object({
-      en: z.array(z.union([textBlock, imageBlock({ image }), videoBlock])).optional(),
-      zh: z.array(z.union([textBlock, imageBlock({ image }), videoBlock])).optional(),
+      en: z.array(block).optional(),
+      zh: z.array(block).optional(),
     })
     .optional();
+};
 
 const workSchema = ({ image }: { image: any }) =>
   z.object({

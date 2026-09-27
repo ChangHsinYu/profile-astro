@@ -10,35 +10,88 @@ const defaultAllow =
 function markdownToHtml(content = "") {
   return marked.parse(content);
 }
+
+function soundcloudSrc(src = "") {
+  if (!src) return "";
+
+  let trackUrl = src;
+
+  try {
+    const url = new URL(src);
+
+    // 如果貼的是嵌入網址，先取出原始歌曲網址。
+    if (url.hostname === "w.soundcloud.com") {
+      trackUrl = url.searchParams.get("url") || src;
+    }
+  } catch {
+    return "";
+  }
+
+  const params = new URLSearchParams({
+    url: trackUrl,
+    auto_play: "false",
+    visual: "false",
+    show_artwork: "false",
+    show_comments: "false",
+    show_user: "false",
+    show_reposts: "false",
+    hide_related: "true",
+    sharing: "false",
+    buying: "false",
+    download: "false",
+  });
+
+  return `https://w.soundcloud.com/player/?${params.toString()}`;
+}
 ---
 
 <div class="content_blocks" data-lang={lang}>
-  {blocks.map((block) => (
-    block.type === "text" ? (
-      <div class="dscrptn" set:html={markdownToHtml(block.content)} />
-    ) : block.type === "image" ? (
-      <div class="box">
-        <Image
-          class="subimg"
-          src={block.src}
-          alt={block.alt || title || ""}
-          widths={[600, 1000, 1600, 2200]}
-          format="webp"
-          loading="lazy"
-          decoding="async"
-        />
-        {block.credit && <div class="photocredit">(photo by : {block.credit})</div>}
-      </div>
-    ) : block.type === "video" ? (
-      <iframe
-        title={block.title || title || "video"}
-        src={block.src}
-        frameborder="0"
-        allow={block.allow || defaultAllow}
-        allowfullscreen
-      ></iframe>
-    ) : null
-  ))}
+  {
+    blocks.map((block) =>
+      block.type === "text" ? (
+        <div class="dscrptn" set:html={markdownToHtml(block.content)} />
+      ) : block.type === "image" ? (
+        <div class="box">
+          <Image
+            class="subimg"
+            src={block.src}
+            alt={block.alt || title || ""}
+            widths={[600, 1000, 1600, 2200]}
+            format="webp"
+            loading="lazy"
+            decoding="async"
+          />
+          {block.credit && (
+            <div class="photocredit">(photo by : {block.credit})</div>
+          )}
+        </div>
+      ) : block.type === "video" ? (
+        <div class="video-embed">
+          <iframe
+            title={block.title || title || "video"}
+            src={block.src}
+            allow={block.allow || defaultAllow}
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      ) : block.type === "soundcloud" ? (
+        <div class="box">
+          <iframe
+            class="soundcloud-player"
+            title={block.title || title || "SoundCloud"}
+            src={soundcloudSrc(block.src)}
+            width="100%"
+            height={block.height || 166}
+            style={`display: block; width: 100%; height: ${block.height || 166}px; aspect-ratio: auto; border: 0;`}
+            scrolling="no"
+            allow="autoplay"
+            loading="lazy"
+          ></iframe>
+        </div>
+      ) : null
+    )
+  }
 
   <div class="box"></div>
 </div>

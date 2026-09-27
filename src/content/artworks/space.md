@@ -7,6 +7,7 @@ material:
 category: Audio visual performance
 event: " "
 venue:
+  - El Museo Cultural De Santa Fe (US)
   - National Taiwan Science Education Center (TW)
   - Luodong Cultural Working House (TW)
   - Universität für künstlerische und industrielle Gestaltung Linz (AT)

@@ -9,6 +9,7 @@ material:
 category: Sound installation
 event: " "
 venue:
+  - Pier-2 Art Center (TW)
   - Waley Art (TW)
 featuredImage: ../../assets/artworks/sun/img0.jpg
 blocks:
@@ -39,6 +40,18 @@ blocks:
     - type: image
       src: ../../assets/artworks/sun/img6.jpg
       credit: me
+    - type: image
+      src: ../../assets/artworks/sun/img7.jpg
+      credit: Pier-2 Art Center
+    - type: image
+      src: ../../assets/artworks/sun/img8.jpg
+      credit: Pier-2 Art Center
+    - type: image
+      src: ../../assets/artworks/sun/img9.jpg
+      credit: Pier-2 Art Center
+    - type: image
+      src: ../../assets/artworks/sun/img10.jpg
+      credit: Pier-2 Art Center
     - type: video
       src: https://www.youtube.com/embed/JYn0N0XmoYs?si=wYKRW4jUenY0PyTB
       title: YouTube video player
@@ -70,6 +83,18 @@ blocks:
     - type: image
       src: ../../assets/artworks/sun/img6.jpg
       credit: me
+    - type: image
+      src: ../../assets/artworks/sun/img7.jpg
+      credit: Pier-2 Art Center
+    - type: image
+      src: ../../assets/artworks/sun/img8.jpg
+      credit: Pier-2 Art Center
+    - type: image
+      src: ../../assets/artworks/sun/img9.jpg
+      credit: Pier-2 Art Center
+    - type: image
+      src: ../../assets/artworks/sun/img10.jpg
+      credit: Pier-2 Art Center
     - type: video
       src: https://www.youtube.com/embed/JYn0N0XmoYs?si=wYKRW4jUenY0PyTB
       title: YouTube video player

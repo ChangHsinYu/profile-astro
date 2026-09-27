@@ -37,6 +37,12 @@ blocks:
     - type: image
       src: ../../assets/artworks/cross/img6.jpg
       credit: CHANG HSIN YU
+    - type: image
+      src: ../../assets/artworks/cross/img7.jpg
+      credit: CHANG HSIN YU
+    - type: image
+      src: ../../assets/artworks/cross/img8.jpg
+      credit: CHANG HSIN YU
     - type: video
       src: https://player.vimeo.com/video/530008996
       title: vimeo-player
@@ -64,6 +70,12 @@ blocks:
       credit: CHANG HSIN YU
     - type: image
       src: ../../assets/artworks/cross/img6.jpg
+      credit: CHANG HSIN YU
+    - type: image
+      src: ../../assets/artworks/cross/img7.jpg
+      credit: CHANG HSIN YU
+    - type: image
+      src: ../../assets/artworks/cross/img8.jpg
       credit: CHANG HSIN YU
     - type: video
       src: https://player.vimeo.com/video/530008996
